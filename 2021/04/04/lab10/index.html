@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Handout 1 -- Course information | CN351 Web Application Security Course Website</title>
+  <title>LAB 10 -- วันที่ 4 เมษายน พ.ศ. 2564 | CN351 Web Application Security Course Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="ให้นักศึกษาดาวน์โหลดและอ่าน Course information ให้ครบถ้วนตั้งแต่ต้นจนจบ">
+  <meta name="description" content="Injection flawsในแลบนี้นักศึกษาจะใช้ web security dojo VM   ทำแบบฝึกหัด WebGoat เรื่อง Injection Flaws โดยให้ทำแลบในหัวข้อต่อไปนี้   Command Injection Numeric SQL Injection Log Spoofing XPATH Injectio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Handout 1 -- Course information">
-<meta property="og:url" content="http://nchanath.github.io/cn351/2021/01/21/info/index.html">
+<meta property="og:title" content="LAB 10 -- วันที่ 4 เมษายน พ.ศ. 2564">
+<meta property="og:url" content="http://nchanath.github.io/cn351/2021/04/04/lab10/index.html">
 <meta property="og:site_name" content="CN351 Web Application Security Course Website">
-<meta property="og:description" content="ให้นักศึกษาดาวน์โหลดและอ่าน Course information ให้ครบถ้วนตั้งแต่ต้นจนจบ">
+<meta property="og:description" content="Injection flawsในแลบนี้นักศึกษาจะใช้ web security dojo VM   ทำแบบฝึกหัด WebGoat เรื่อง Injection Flaws โดยให้ทำแลบในหัวข้อต่อไปนี้   Command Injection Numeric SQL Injection Log Spoofing XPATH Injectio">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-21T11:23:48.000Z">
-<meta property="article:modified_time" content="2021-02-04T05:56:45.400Z">
+<meta property="article:published_time" content="2021-04-04T11:40:25.000Z">
+<meta property="article:modified_time" content="2021-04-04T13:20:49.880Z">
 <meta property="article:author" content="Chanathip Namprempre">
-<meta property="article:tag" content="Handouts">
+<meta property="article:tag" content="Labs">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@ajmeaw">
   
@@ -83,10 +83,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-info" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-lab10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cn351/2021/01/21/info/" class="article-date">
-  <time class="dt-published" datetime="2021-01-21T11:23:48.000Z" itemprop="datePublished">2021-01-21</time>
+    <a href="/cn351/2021/04/04/lab10/" class="article-date">
+  <time class="dt-published" datetime="2021-04-04T11:40:25.000Z" itemprop="datePublished">2021-04-04</time>
 </a>
     
   </div>
@@ -97,7 +97,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Handout 1 -- Course information
+      LAB 10 -- วันที่ 4 เมษายน พ.ศ. 2564
     </h1>
   
 
@@ -105,16 +105,48 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>ให้นักศึกษาดาวน์โหลดและอ่าน <a target="_blank" rel="noopener" href="http://chanathip.ece.engr.tu.ac.th/CN351-PDFS/handouts/info.pdf">Course information</a> ให้ครบถ้วนตั้งแต่ต้นจนจบ</p>
+        <h1 id="Injection-flaws"><a href="#Injection-flaws" class="headerlink" title="Injection flaws"></a>Injection flaws</h1><p>ในแลบนี้นักศึกษาจะใช้ web security dojo VM </p>
+<ol>
+<li>ทำแบบฝึกหัด WebGoat เรื่อง Injection Flaws โดยให้ทำแลบในหัวข้อต่อไปนี้</li>
+</ol>
+<ul>
+<li>Command Injection</li>
+<li>Numeric SQL Injection</li>
+<li>Log Spoofing</li>
+<li>XPATH Injection</li>
+<li>String SQL Injection</li>
+<li>LAB: SQL Injection Stages 1 and 3</li>
+<li>Blind Numeric SQL Injection</li>
+<li>Blind String SQL Injection</li>
+</ul>
+<ol start="2">
+<li>ให้ทำแบบฝึกหัด dvwa ในหัวข้อ SQL Injection เพียงหัวข้อเดียว โดยให้</li>
+</ol>
+<ul>
+<li>แสดงผลลัพธ์บน browser และ</li>
+<li>แสดงการส่ง SQL query ที่ใช้ในการโจมตีในข้อนี้ ผ่าน mysql client ที่ terminal และแสดงผลลัพธ์ที่ได้ว่ามีเนื้อหาที่ตรงกันกับผลลัพธ์ที่แสดงบน browser</li>
+</ul>
+<p>ในการทำแลบทั้งสองส่วนให้ใช้</p>
+<ul>
+<li>burp suite สำหรับดักจับข้อมูลระหว่าง browser และ server และ</li>
+<li>firefox ในการสำรวจ source code<br>เท่านั้น ห้ามใช้เครื่องมืออำนวยความสะดวกอื่น ๆ เช่น Tamper Data, Live HTTP headers ฯลฯ</li>
+</ul>
+<h2 id="รายงานแลบ"><a href="#รายงานแลบ" class="headerlink" title="รายงานแลบ"></a>รายงานแลบ</h2><p>ให้เขียนสรุปสั้น ๆ เพื่ออธิบาย<strong>ในแต่ละข้อ</strong>ถึง</p>
+<ul>
+<li>สาเหตุที่ทำให้เกิดช่องโหว่ และ</li>
+<li>แนวคิดในการโจมตีของนักศึกษา (เขียนโดยละเอียดพอประมาณ) และ</li>
+<li>SQL query (หรือ queries) ที่นักศึกษาคิดว่าถูกส่งไปยังฐานข้อมูลเมื่อนักศึกษาทำการโจมตี และคำอธิบายผลลัพธ์ที่ได้ ว่าเกิดจาก SQL query แต่ละค่าที่ส่งไปได้เพราะอะไร อย่างไร และ</li>
+<li>แนวคิดในการปิดหรือรับมือกับช่องโหว่ (เขียนโดยละเอียดพอประมาณ)</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nchanath.github.io/cn351/2021/01/21/info/" data-id="ckn370rv90001gpt9dgrafbpu" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
+      <a data-url="http://nchanath.github.io/cn351/2021/04/04/lab10/" data-id="ckn370rvg0006gpt96ql8hsam" data-title="LAB 10 -- วันที่ 4 เมษายน พ.ศ. 2564" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Handouts/" rel="tag">Handouts</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
 
     </footer>
   </div>
@@ -122,19 +154,10 @@
     
 <nav id="article-nav">
   
-    <a href="/cn351/2021/01/24/lab1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          LAB 1 -- วันที่ 25 มกราคม พ.ศ. 2564
-        
-      </div>
-    </a>
   
-  
-    <a href="/cn351/2021/01/21/welcome/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/cn351/2021/03/28/lab9/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Welcome to CN351</div>
+      <div class="article-nav-title">LAB 9 -- วันที่ 29 มีนาคม พ.ศ. 2564</div>
     </a>
   
 </nav>
