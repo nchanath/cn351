@@ -14,7 +14,7 @@
 <meta property="og:description" content="Cross-site scripting (XSS)แลบวันนี้มีเนื้อหาเกี่ยวกับ Cross site scripting (XSS) vulnerabilities ให้นักศึกษาทำแลบดังต่อไปนี้    Introduction to JavaScript ที่ W3schools เรื่อง JavaScript tutorial http">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-25T11:40:25.000Z">
-<meta property="article:modified_time" content="2021-04-25T09:43:06.620Z">
+<meta property="article:modified_time" content="2021-04-25T13:22:37.790Z">
 <meta property="article:author" content="Chanathip Namprempre">
 <meta property="article:tag" content="Labs">
 <meta name="twitter:card" content="summary">
@@ -109,7 +109,14 @@
 <ol>
 <li><p>  Introduction to JavaScript ที่ W3schools เรื่อง JavaScript tutorial <a target="_blank" rel="noopener" href="http://www.w3schools.com/js/default.asp">http://www.w3schools.com/js/default.asp</a> โดยให้ทำ 4 หัวข้อแรก (home, introduction, where to, output)</p>
 </li>
-<li><p>WebGoat หัวข้อต่อไปนี้</p>
+<li><p>ในเครื่อง Dojo VM </p>
+<ul>
+<li>สร้างแบบฟอร์ม hello-whoever-form.html และสร้างโปรแกรมชื่อ hello-whoever.php ที่สามารถแสดงคำว่า Hello xx! ในเว็บบราวเซอร์ โดย xx คือ คำที่ผู้ใช้กรอกลงไปในแบบฟอร์ม และ method ในการเรียกโปรแกรมเป็น POST จากนั้นให้นำไฟล์ทั้งสองไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab11/hello-whoever-form.html">http://targets.local/lab11/hello-whoever-form.html</a></li>
+<li>เพิ่มการตั้งค่า cookie ใน hello-whoever.php โดยนักศึกษาสามารถตั้งค่า cookie ให้เป็นค่าใดก็ได้ที่ต้องการ</li>
+<li>แสดงให้เห็นว่าการทำงานของสองไฟล์นี้ ก่อให้เกิดช่องโหว่แบบ cross-site scripting โดยการแสดงให้เห็นว่า ผู้ร้ายสามารถใช้ javascript ทำการ pop up หน้าต่างที่แสดงค่า cookie ของผู้ใช้ได้ เมื่อผู้ใช้ถูกหลอกให้พิมพ์ค่าอินพุตบางอย่างลงในแบบฟอร์ม (หรือถูกหลอกให้ submit แบบฟอร์มที่มีค่าอินพุตนั้นโดยไม่รู้ตัว)</li>
+</ul>
+</li>
+<li><p>ในเครื่อง Dojo VM ทำแลบ WebGoat ในหัวข้อต่อไปนี้</p>
 <ul>
 <li>LAB: Cross Site Scripting: stages 1, 3, 5</li>
 <li>Stored XSS attacks</li>
@@ -135,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nchanath.github.io/cn351/2021/04/25/lab11/" data-id="cknwzi87e0007yvt915wf9kj6" data-title="LAB 11 -- วันที่ 26 เมษายน พ.ศ. 2564" class="article-share-link">Share</a>
+      <a data-url="http://nchanath.github.io/cn351/2021/04/25/lab11/" data-id="cknx7e6wh0007ezt952nr1ecy" data-title="LAB 11 -- วันที่ 26 เมษายน พ.ศ. 2564" class="article-share-link">Share</a>
       
       
       
