@@ -82,6 +82,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-lab3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2021/02/01/lab3/" class="article-date">
+  <time class="dt-published" datetime="2021-02-01T05:07:42.000Z" itemprop="datePublished">2021-02-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2021/02/01/lab3/">LAB 3 -- วันที่ 8 กุมภาพันธ์ พ.ศ. 2564</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="ส่วนที่-1-ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้-method-GET-และ-method-POST"><a href="#ส่วนที่-1-ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้-method-GET-และ-method-POST" class="headerlink" title="ส่วนที่ 1: ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้ method GET และ method POST"></a>ส่วนที่ 1: ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้ method GET และ method POST</h2><ol>
+<li>สร้างไฟล์ form-w-get.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า form-input และให้ใช้ method เป็น GET</li>
+<li>สร้างไฟล์ form-w-post.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า form-input และให้ใช้ method เป็น POST</li>
+<li>สร้างไฟล์ get-formhandler.php และ post-formhandler.php สำหรับประมวลผลข้อมูลที่ได้รับจากการกรอกแบบฟอร์มแบบ GET และแบบ POST ตามลำดับ โดยให้แสดงผลลัพธ์เป็น form-input = x โดย x คือ ค่าที่ได้รับจากการกรอกแบบฟอร์มของผู้ใช้</li>
+<li>นำไฟล์ form-w-get.html form-w-post.html get-formhandler.php และไฟล์ post-formhandler.php ไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/">http://targets.local/lab2/</a>….</li>
+<li>ทดสอบโดยใช้ burp suite และ developer tools ใน firefox</li>
+<li>พิจารณาว่าการใช้ GET และ POST นั้นมีความแตกต่างกันอย่างไร แล้วเขียนบรรยายตามความเข้าใจของตนลงในบันทึกแลบ</li>
+</ol>
+<h2 id="ส่วนที่-2-ทดสอบการรับส่ง-hidden-variables"><a href="#ส่วนที่-2-ทดสอบการรับส่ง-hidden-variables" class="headerlink" title="ส่วนที่ 2: ทดสอบการรับส่ง hidden variables"></a>ส่วนที่ 2: ทดสอบการรับส่ง hidden variables</h2><ol>
+<li>ใน directory ชื่อ lab2 สร้างไฟล์ hidden-var-form.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า normal-var และมีการส่ง hidden variable หนึ่งตัวชื่อ hidden-var</li>
+<li>สร้างไฟล์ hidden-var-formhandler.php เพื่อประมวลผลข้อมูลที่ได้รับจากการกรอกแบบฟอร์ม โดยให้แสดงผลลัพธ์เป็น normal-var = x and hidden-var = y โดย x คือ ค่าที่ได้รับจากการกรอกแบบฟอร์มของผู้ใช้ และ y คือ ค่าของ hidden variable</li>
+<li>นำไฟล์ hidden-var-form.html และไฟล์ hidden-var-formhandler.php ไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/">http://targets.local/lab2/</a>….</li>
+<li>ทดสอบโดยใช้ burp suite และ developer tools ใน firefox</li>
+<li>อธิบายว่า hidden variables คืออะไร การรับ-ส่ง hidden variable มีลักษณะอย่างไร</li>
+</ol>
+<h2 id="ส่วนที่-3-ทดสอบการรับส่ง-cookies"><a href="#ส่วนที่-3-ทดสอบการรับส่ง-cookies" class="headerlink" title="ส่วนที่ 3: ทดสอบการรับส่ง cookies"></a>ส่วนที่ 3: ทดสอบการรับส่ง cookies</h2><ol>
+<li>สร้างไฟล์ชื่อ setcookie.php โดยให้มีการทำงานคือ ให้สั่ง server ให้ส่ง cookie ที่มี name เป็น remember และ value เป็น ชื่อของนักศึกษา</li>
+<li>สร้างไฟล์ชื่อ usecookie.php โดยให้มีการทำงานคือ ให้สั่ง server ให้แสดงค่า cookie ที่ได้รับมาจาก browser</li>
+<li>ใช้ burp suite และ firefox quantum ในการสำรวจเนื้อหาของข้อมูลที่มีการแลกเปลี่ยนกันสำหรับทั้งสอง requests ข้างต้น</li>
+<li>อธิบายว่า cookies คืออะไร การรับ-ส่ง cookies มีลักษณะอย่างไร</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nchanath.github.io/cn351/2021/02/01/lab3/" data-id="cknwzi87g000byvt98f860mzz" data-title="LAB 3 -- วันที่ 8 กุมภาพันธ์ พ.ศ. 2564" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-lab2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/cn351/2021/01/29/lab2/" class="article-date">
@@ -143,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nchanath.github.io/cn351/2021/01/29/lab2/" data-id="cknoa3wfi0007g5t90hcohlvw" data-title="LAB 2 -- วันที่ 1 กุมภาพันธ์ พ.ศ. 2564" class="article-share-link">Share</a>
+      <a data-url="http://nchanath.github.io/cn351/2021/01/29/lab2/" data-id="cknwzi87f0008yvt9amcbg18s" data-title="LAB 2 -- วันที่ 1 กุมภาพันธ์ พ.ศ. 2564" class="article-share-link">Share</a>
       
       
       
@@ -209,7 +270,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nchanath.github.io/cn351/2021/01/24/lab1/" data-id="cknoa3wfh0006g5t99d41h262" data-title="LAB 1 -- วันที่ 25 มกราคม พ.ศ. 2564" class="article-share-link">Share</a>
+      <a data-url="http://nchanath.github.io/cn351/2021/01/24/lab1/" data-id="cknwzi8790003yvt9gebl5pqm" data-title="LAB 1 -- วันที่ 25 มกราคม พ.ศ. 2564" class="article-share-link">Share</a>
       
       
       
@@ -250,7 +311,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nchanath.github.io/cn351/2021/01/21/info/" data-id="cknoa3wfb0001g5t92z4ogkea" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
+      <a data-url="http://nchanath.github.io/cn351/2021/01/21/info/" data-id="cknwzi8760001yvt91qija9w2" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
       
       
       
@@ -307,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nchanath.github.io/cn351/2021/01/21/welcome/" data-id="cknoa3wfv000tg5t9a6rdgt5p" data-title="Welcome to CN351" class="article-share-link">Share</a>
+      <a data-url="http://nchanath.github.io/cn351/2021/01/21/welcome/" data-id="cknwzi87r000vyvt91r901nzk" data-title="Welcome to CN351" class="article-share-link">Share</a>
       
       
       
@@ -352,6 +413,10 @@
       <ul>
         
           <li>
+            <a href="/cn351/2021/04/25/lab11/">LAB 11 -- วันที่ 26 เมษายน พ.ศ. 2564</a>
+          </li>
+        
+          <li>
             <a href="/cn351/2021/04/04/lab10/">LAB 10 -- วันที่ 19 เมษายน พ.ศ. 2564</a>
           </li>
         
@@ -365,10 +430,6 @@
         
           <li>
             <a href="/cn351/2021/03/08/lab7/">LAB 7 -- วันที่ 8 มีนาคม พ.ศ. 2564</a>
-          </li>
-        
-          <li>
-            <a href="/cn351/2021/02/28/lab6/">LAB 6 -- วันที่ 1 มีนาคม พ.ศ. 2564</a>
           </li>
         
       </ul>

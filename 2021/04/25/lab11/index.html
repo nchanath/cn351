@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>LAB 9 -- วันที่ 5 เมษายน พ.ศ. 2564 | CN351 Web Application Security Course Website</title>
+  <title>LAB 11 -- วันที่ 26 เมษายน พ.ศ. 2564 | CN351 Web Application Security Course Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Access control flawsในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Access Control Flaws โดยให้ข้าม Stage 2 และ 4 ขั้นตอนการทำแลบ Boot เครื่องเสมือนชื่อ web security dojo Star">
+  <meta name="description" content="Cross-site scripting (XSS)แลบวันนี้มีเนื้อหาเกี่ยวกับ Cross site scripting (XSS) vulnerabilities ให้นักศึกษาทำแลบดังต่อไปนี้    Introduction to JavaScript ที่ W3schools เรื่อง JavaScript tutorial http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LAB 9 -- วันที่ 5 เมษายน พ.ศ. 2564">
-<meta property="og:url" content="http://nchanath.github.io/cn351/2021/03/28/lab9/index.html">
+<meta property="og:title" content="LAB 11 -- วันที่ 26 เมษายน พ.ศ. 2564">
+<meta property="og:url" content="http://nchanath.github.io/cn351/2021/04/25/lab11/index.html">
 <meta property="og:site_name" content="CN351 Web Application Security Course Website">
-<meta property="og:description" content="Access control flawsในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Access Control Flaws โดยให้ข้าม Stage 2 และ 4 ขั้นตอนการทำแลบ Boot เครื่องเสมือนชื่อ web security dojo Star">
+<meta property="og:description" content="Cross-site scripting (XSS)แลบวันนี้มีเนื้อหาเกี่ยวกับ Cross site scripting (XSS) vulnerabilities ให้นักศึกษาทำแลบดังต่อไปนี้    Introduction to JavaScript ที่ W3schools เรื่อง JavaScript tutorial http">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-28T11:40:25.000Z">
-<meta property="article:modified_time" content="2021-04-05T02:50:57.320Z">
+<meta property="article:published_time" content="2021-04-25T11:40:25.000Z">
+<meta property="article:modified_time" content="2021-04-25T09:43:06.620Z">
 <meta property="article:author" content="Chanathip Namprempre">
 <meta property="article:tag" content="Labs">
 <meta name="twitter:card" content="summary">
@@ -83,10 +83,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-lab9" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-lab11" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cn351/2021/03/28/lab9/" class="article-date">
-  <time class="dt-published" datetime="2021-03-28T11:40:25.000Z" itemprop="datePublished">2021-03-28</time>
+    <a href="/cn351/2021/04/25/lab11/" class="article-date">
+  <time class="dt-published" datetime="2021-04-25T11:40:25.000Z" itemprop="datePublished">2021-04-25</time>
 </a>
     
   </div>
@@ -97,7 +97,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      LAB 9 -- วันที่ 5 เมษายน พ.ศ. 2564
+      LAB 11 -- วันที่ 26 เมษายน พ.ศ. 2564
     </h1>
   
 
@@ -105,32 +105,37 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Access-control-flaws"><a href="#Access-control-flaws" class="headerlink" title="Access control flaws"></a>Access control flaws</h1><p>ในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Access Control Flaws โดยให้ข้าม Stage 2 และ 4</p>
-<h2 id="ขั้นตอนการทำแลบ"><a href="#ขั้นตอนการทำแลบ" class="headerlink" title="ขั้นตอนการทำแลบ"></a>ขั้นตอนการทำแลบ</h2><ol>
-<li>Boot เครื่องเสมือนชื่อ web security dojo</li>
-<li>Start WebGoat</li>
-<li>ทำแลบ Access Control Flaws โดยให้ใช้
+        <h1 id="Cross-site-scripting-XSS"><a href="#Cross-site-scripting-XSS" class="headerlink" title="Cross-site scripting (XSS)"></a>Cross-site scripting (XSS)</h1><p>แลบวันนี้มีเนื้อหาเกี่ยวกับ Cross site scripting (XSS) vulnerabilities ให้นักศึกษาทำแลบดังต่อไปนี้</p>
+<ol>
+<li><p>  Introduction to JavaScript ที่ W3schools เรื่อง JavaScript tutorial <a target="_blank" rel="noopener" href="http://www.w3schools.com/js/default.asp">http://www.w3schools.com/js/default.asp</a> โดยให้ทำ 4 หัวข้อแรก (home, introduction, where to, output)</p>
+</li>
+<li><p>WebGoat หัวข้อต่อไปนี้</p>
 <ul>
-<li>burp suite สำหรับดักจับข้อมูลระหว่าง browser และ server และ</li>
-<li>firefox ในการสำรวจ source code</li>
+<li>LAB: Cross Site Scripting: stages 1, 3, 5</li>
+<li>Stored XSS attacks</li>
+<li>Reflected XSS attacks</li>
 </ul>
-เท่านั้น ห้ามใช้เครื่องมืออำนวยความสะดวกอื่น ๆ เช่น Tamper Data, Live HTTP headers ฯลฯ</li>
-<li>ส่งรายงานแลบที่มีสองส่วนต่อไปนี้
-<ul>
-<li>สำหรับหัวข้อ Using an access control matrix ให้เขียนตารางแสดง access control matrix โดยให้แยกเป็น 2 ตาราง ตารางที่ 1 แสดงความสัมพันธ์ระหว่าง usernames และ user roles ตารางที่ 2 แสดงความสัมพันธ์ระหว่าง user roles และ resources</li>
-<li>สำหรับหัวข้อที่เหลือ ให้เขียนสรุปสั้น ๆ เพื่ออธิบายในแต่ละข้อถึง
-<ul>
-<li>สาเหตุที่ทำให้เกิดช่องโหว่ และ</li>
-<li>แนวคิดในการโจมตีของนักศึกษา (เขียนโดยละเอียดพอประมาณ) และ</li>
-<li>แนวคิดในการปิดหรือรับมือกับช่องโหว่ (เขียนโดยละเอียดพอประมาณ)</li>
-</ul></li>
-</ul></li>
+</li>
 </ol>
+<h2 id="รายงานแลบ"><a href="#รายงานแลบ" class="headerlink" title="รายงานแลบ"></a>รายงานแลบ</h2><p>สำหรับแต่ละหัวข้อในส่วน WebGoat ให้เขียนสรุปสั้น ๆ เพื่ออธิบาย<strong>ในแต่ละข้อ</strong>ถึง</p>
+<ul>
+<li>  สาเหตุที่ทำให้เกิดช่องโหว่ และ</li>
+<li>  แนวคิดในการโจมตีของนักศึกษา (เขียนโดยละเอียดพอประมาณ) และ</li>
+<li>  แนวคิดในการปิดหรือรับมือกับช่องโหว่ (เขียนโดยละเอียดพอประมาณ)</li>
+</ul>
+<h2 id="ข้อมูลพื้นฐานเกี่ยวกับ-Javascript-ที่อาจเป็นประโยชน์ต่อการทำแลบ"><a href="#ข้อมูลพื้นฐานเกี่ยวกับ-Javascript-ที่อาจเป็นประโยชน์ต่อการทำแลบ" class="headerlink" title="ข้อมูลพื้นฐานเกี่ยวกับ Javascript ที่อาจเป็นประโยชน์ต่อการทำแลบ"></a>ข้อมูลพื้นฐานเกี่ยวกับ Javascript ที่อาจเป็นประโยชน์ต่อการทำแลบ</h2><ul>
+<li>  <a target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_ajax_intro.asp">AJAX basics</a></li>
+<li>  <a target="_blank" rel="noopener" href="http://www.w3schools.com/js/js_htmldom_elements.asp">Lesson</a> on accessing HTML DOM elements with Javascript </li>
+<li>  <a target="_blank" rel="noopener" href="http://www.javaworld.com/article/2077176/scripting-jvm-languages/using-javascript-and-forms.html">Article</a> on Javascript and HTML forms </li>
+<li>  Description of <a target="_blank" rel="noopener" href="https://medium.com/iocscan/reflected-cross-site-scripting-r-xss-b06c3e8d638a">reflected XSS</a></li>
+<li>  Description of <a target="_blank" rel="noopener" href="https://medium.com/iocscan/persistent-cross-site-scripting-p-xss-557c70377554">stored XSS</a></li>
+<li>  Description of <a target="_blank" rel="noopener" href="https://medium.com/iocscan/dom-based-cross-site-scripting-dom-xss-3396453364fd">DOM-based XSS</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nchanath.github.io/cn351/2021/03/28/lab9/" data-id="cknwzi87o000pyvt99or35bhu" data-title="LAB 9 -- วันที่ 5 เมษายน พ.ศ. 2564" class="article-share-link">Share</a>
+      <a data-url="http://nchanath.github.io/cn351/2021/04/25/lab11/" data-id="cknwzi87e0007yvt915wf9kj6" data-title="LAB 11 -- วันที่ 26 เมษายน พ.ศ. 2564" class="article-share-link">Share</a>
       
       
       
@@ -142,19 +147,10 @@
     
 <nav id="article-nav">
   
-    <a href="/cn351/2021/04/04/lab10/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          LAB 10 -- วันที่ 19 เมษายน พ.ศ. 2564
-        
-      </div>
-    </a>
   
-  
-    <a href="/cn351/2021/03/21/lab8/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/cn351/2021/04/04/lab10/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">LAB 8 -- วันที่ 22 มีนาคม พ.ศ. 2564</div>
+      <div class="article-nav-title">LAB 10 -- วันที่ 19 เมษายน พ.ศ. 2564</div>
     </a>
   
 </nav>
