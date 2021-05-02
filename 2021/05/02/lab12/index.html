@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>syllabus | CN351 Web Application Security Course Website</title>
+  <title>LAB 12 -- วันที่ 3 พฤษภาคม พ.ศ. 2564 | CN351 Web Application Security Course Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="The CN351 playlist referred to in this course is on YouTube.    # date topics labs readings&#x2F;preparations           1 25&#x2F;01&#x2F;21 Course overview, Lab setup, Unix basics Lab 1: virtualbox, ubuntu, unix la">
-<meta property="og:type" content="website">
-<meta property="og:title" content="syllabus">
-<meta property="og:url" content="http://nchanath.github.io/cn351/syllabus/index.html">
+  <meta name="description" content="Cross-site scripting (XSS)แลบวันนี้มีเนื้อหาเกี่ยวกับ Cross site request forgery (CSRF) vulnerabilities ให้นักศึกษาทำแลบ WebGoat ภายใต้หัวข้อ Cross site scripting (XSS) โดยให้ทำหัวข้อย่อยดังต่อไปนี้">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LAB 12 -- วันที่ 3 พฤษภาคม พ.ศ. 2564">
+<meta property="og:url" content="http://nchanath.github.io/cn351/2021/05/02/lab12/index.html">
 <meta property="og:site_name" content="CN351 Web Application Security Course Website">
-<meta property="og:description" content="The CN351 playlist referred to in this course is on YouTube.    # date topics labs readings&#x2F;preparations           1 25&#x2F;01&#x2F;21 Course overview, Lab setup, Unix basics Lab 1: virtualbox, ubuntu, unix la">
+<meta property="og:description" content="Cross-site scripting (XSS)แลบวันนี้มีเนื้อหาเกี่ยวกับ Cross site request forgery (CSRF) vulnerabilities ให้นักศึกษาทำแลบ WebGoat ภายใต้หัวข้อ Cross site scripting (XSS) โดยให้ทำหัวข้อย่อยดังต่อไปนี้">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-21T11:15:14.000Z">
-<meta property="article:modified_time" content="2021-04-04T13:26:06.730Z">
+<meta property="article:published_time" content="2021-05-02T06:40:25.000Z">
+<meta property="article:modified_time" content="2021-05-02T06:33:43.280Z">
 <meta property="article:author" content="Chanathip Namprempre">
+<meta property="article:tag" content="Labs">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@ajmeaw">
   
@@ -82,10 +83,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-lab12" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cn351/syllabus/index.html" class="article-date">
-  <time class="dt-published" datetime="2021-01-21T11:15:14.000Z" itemprop="datePublished">2021-01-21</time>
+    <a href="/cn351/2021/05/02/lab12/" class="article-date">
+  <time class="dt-published" datetime="2021-05-02T06:40:25.000Z" itemprop="datePublished">2021-05-02</time>
 </a>
     
   </div>
@@ -96,7 +97,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      syllabus
+      LAB 12 -- วันที่ 3 พฤษภาคม พ.ศ. 2564
     </h1>
   
 
@@ -104,156 +105,46 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>The <a target="_blank" rel="noopener" href="https://youtube.com/playlist?list=PLFJJoWdolIir7yKOiq7PKaeppabpG3m7B">CN351 playlist</a> referred to in this course is on YouTube.</p>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>date</th>
-<th align="center">topics</th>
-<th align="center">labs</th>
-<th align="center">readings/preparations</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><img width=30/></td>
-<td><img width=80/></td>
-<td align="center"><img width=150/></td>
-<td align="center"><img width=150/></td>
-<td align="center"><img width=50/></td>
-</tr>
-<tr>
-<td>1</td>
-<td>25/01/21</td>
-<td align="center">Course overview, Lab setup, Unix basics</td>
-<td align="center">Lab 1: virtualbox, ubuntu, unix lab, WSL2</td>
-<td align="center">Handout 1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>01/02/21</td>
-<td align="center">Web technology review</td>
-<td align="center">Lab 2: Unix basics, talk to port 80, finding document root</td>
-<td align="center">SP Chapters 1, 2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>08/02/21</td>
-<td align="center">HTTP and Unix basics</td>
-<td align="center">Lab 3: Burp suite, html form, hidden variables, cookies</td>
-<td align="center">Handout 2</td>
-</tr>
-<tr>
-<td>4</td>
-<td>15/02/21</td>
-<td align="center">HTTP basics</td>
-<td align="center">Lab 4: Postman client, Nodejs, Express framework, VSCode</td>
-<td align="center">SP Chapter 20</td>
-</tr>
-<tr>
-<td>5</td>
-<td>22/02/21</td>
-<td align="center">Mapping the application, spidering, tampering with requests</td>
-<td align="center">Lab 5: Web server security testing with Burp Suite</td>
-<td align="center">SP Chapters 3, 4</td>
-</tr>
-<tr>
-<td>6</td>
-<td>01/03/21</td>
-<td align="center">Bypassing client controls</td>
-<td align="center">Lab 6: Webgoat parameter tampering</td>
-<td align="center">SP Chapter 5</td>
-</tr>
-<tr>
-<td>7</td>
-<td>08/03/21</td>
-<td align="center">Authentication</td>
-<td align="center">Lab 7: Webgoat authentication flaws</td>
-<td align="center">SP Chapter 6</td>
-</tr>
-<tr>
-<td>8</td>
-<td>15/03/21</td>
-<td align="center"><b>Midterm week</b></td>
-<td align="center">No exam</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>9</td>
-<td>22/03/21</td>
-<td align="center">Session management</td>
-<td align="center">Lab 8: Webgoat session management flaws</td>
-<td align="center">SP Chapter 7</td>
-</tr>
-<tr>
-<td>10</td>
-<td>29/03/21</td>
-<td align="center">Cancelled</td>
-<td align="center">None</td>
-<td align="center">None</td>
-</tr>
-<tr>
-<td>11</td>
-<td>05/04/21</td>
-<td align="center">Access controls</td>
-<td align="center">Lab 9: Webgoat access control flaws</td>
-<td align="center">SP Chapter 8</td>
-</tr>
-<tr>
-<td>12</td>
-<td>12/04/21</td>
-<td align="center"><b>Songkran</b></td>
-<td align="center">None</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>13</td>
-<td>19/04/21</td>
-<td align="center">Data stores</td>
-<td align="center">Lab 10: Webgoat injection flaws</td>
-<td align="center">SP Chapter 9</td>
-</tr>
-<tr>
-<td>14</td>
-<td>26/04/21</td>
-<td align="center">Application logic, XSS</td>
-<td align="center">Lab 11: Webgoat XSS</td>
-<td align="center">SP Chapters 11, 12</td>
-</tr>
-<tr>
-<td>15</td>
-<td>03/05/21</td>
-<td align="center">CSRF</td>
-<td align="center">Lab 12: Webgoat CSRF</td>
-<td align="center">SP Chapter 13</td>
-</tr>
-<tr>
-<td>16</td>
-<td>10/05/21</td>
-<td align="center">Single Origin Policy</td>
-<td align="center">Project</td>
-<td align="center">TBA</td>
-</tr>
-<tr>
-<td>17</td>
-<td>17/05/21</td>
-<td align="center">JWT security</td>
-<td align="center">TBA</td>
-<td align="center">TBA</td>
-</tr>
-</tbody></table>
+        <h1 id="Cross-site-scripting-XSS"><a href="#Cross-site-scripting-XSS" class="headerlink" title="Cross-site scripting (XSS)"></a>Cross-site scripting (XSS)</h1><p>แลบวันนี้มีเนื้อหาเกี่ยวกับ Cross site request forgery (CSRF) vulnerabilities ให้นักศึกษาทำแลบ WebGoat ภายใต้หัวข้อ Cross site scripting (XSS) โดยให้ทำหัวข้อย่อยดังต่อไปนี้</p>
+<ol>
+<li>  Cross Site Request Forgery (CSRF)</li>
+<li>  CSRF Prompt By-Pass</li>
+<li>  CSRF Token By-Pass</li>
+</ol>
+<h2 id="รายงานแลบ"><a href="#รายงานแลบ" class="headerlink" title="รายงานแลบ"></a>รายงานแลบ</h2><p>สำหรับแต่ละหัวข้อในส่วน WebGoat ให้เขียนสรุปสั้น ๆ เพื่ออธิบาย<strong>ในแต่ละข้อ</strong>ถึง</p>
+<ul>
+<li>  สาเหตุที่ทำให้เกิดช่องโหว่ และ</li>
+<li>  แนวคิดในการโจมตีของนักศึกษา (เขียนโดยละเอียดพอประมาณ) และ</li>
+<li>  แนวคิดในการปิดหรือรับมือกับช่องโหว่ (เขียนโดยละเอียดพอประมาณ)</li>
+</ul>
+<h2 id="ข้อมูลพื้นฐานที่อาจมีประโยชน์ต่อการทำแลบ"><a href="#ข้อมูลพื้นฐานที่อาจมีประโยชน์ต่อการทำแลบ" class="headerlink" title="ข้อมูลพื้นฐานที่อาจมีประโยชน์ต่อการทำแลบ"></a>ข้อมูลพื้นฐานที่อาจมีประโยชน์ต่อการทำแลบ</h2><ul>
+<li>   <a target="_blank" rel="noopener" href="http://sec101.sourceforge.net/">http://sec101.sourceforge.net/</a></li>
+<li>   <a target="_blank" rel="noopener" href="http://webappsecmovies.sourceforge.net/webgoat/">http://webappsecmovies.sourceforge.net/webgoat/</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nchanath.github.io/cn351/syllabus/index.html" data-id="cko6tanzj0002gvt934segt7z" data-title="syllabus" class="article-share-link">Share</a>
+      <a data-url="http://nchanath.github.io/cn351/2021/05/02/lab12/" data-id="cko6tanzr0008gvt97hgb9hh7" data-title="LAB 12 -- วันที่ 3 พฤษภาคม พ.ศ. 2564" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/cn351/2021/04/25/lab11/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">LAB 11 -- วันที่ 26 เมษายน พ.ศ. 2564</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
