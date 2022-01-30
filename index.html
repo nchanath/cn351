@@ -82,414 +82,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-lab4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cn351/2022/01/30/lab4/" class="article-date">
-  <time class="dt-published" datetime="2022-01-30T11:00:00.000Z" itemprop="datePublished">2022-01-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cn351/2022/01/30/lab4/">LAB 4 -- วันที่ 15 กุมภาพันธ์ พ.ศ. 2564</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="เรียนรู้พื้นฐานที่เกี่ยวข้องกับ-HTTP"><a href="#เรียนรู้พื้นฐานที่เกี่ยวข้องกับ-HTTP" class="headerlink" title="เรียนรู้พื้นฐานที่เกี่ยวข้องกับ HTTP"></a>เรียนรู้พื้นฐานที่เกี่ยวข้องกับ HTTP</h2><p>ให้นักศึกษาปฏิบัติตามวิดีโอ <a target="_blank" rel="noopener" href="https://youtu.be/iYM2zFP3Zn0">HTTP Crash Course &amp; Exploration</a> แล้วอัดวิดีโออธิบายสิ่งที่นักศึกษาทำ ตามลำดับที่ปรากฎในวิดีโอต้นแบบ</p>
-<p>นักศึกษาสามารถคัดลอก code ต่อไปนี้ไปใช้เป็นต้นแบบได้</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express=<span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line">app.use(express.json());</span><br><span class="line">app.use(express.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">	res.send(<span class="string">&#x27;Hello from Express&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">5000</span>, <span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&#x27;Server started on 5000&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="สิ่งที่นักศึกษาควรเรียนรู้ในแลบนี้"><a href="#สิ่งที่นักศึกษาควรเรียนรู้ในแลบนี้" class="headerlink" title="สิ่งที่นักศึกษาควรเรียนรู้ในแลบนี้"></a>สิ่งที่นักศึกษาควรเรียนรู้ในแลบนี้</h2><ul>
-<li>ความแตกต่างระหว่าง GET, POST, PUT, DELETE methods</li>
-<li>ความหมายของ web API และการใช้งาน Postman Client ในการทดสอบ web API</li>
-<li>การใช้งาน web browser developer tools เช่น Firefox หรือ Chrome</li>
-<li>การติดตั้งและตั้งค่า node.js และ express.js สำหรับทำการทดลองส่ง request และรับ response และตรวจสอบค่า HTTP messages ที่ส่งไปให้และได้รับจากเซิร์ฟเวอร์</li>
-</ul>
-<h2 id="สิ่งที่ต้องศึกษาสำหรับแลบนี้"><a href="#สิ่งที่ต้องศึกษาสำหรับแลบนี้" class="headerlink" title="สิ่งที่ต้องศึกษาสำหรับแลบนี้"></a>สิ่งที่ต้องศึกษาสำหรับแลบนี้</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://youtu.be/OVvTv9Hy91Q">What are APIs? - Simply Explained</a> (ความยาว 6:48 นาที)</li>
-<li><a target="_blank" rel="noopener" href="https://www.postman.com/downloads/">Postman Client download</a></li>
-<li><a target="_blank" rel="noopener" href="https://youtu.be/henMP92Dpq0">Postman 101 for Developers</a> (สำหรับวิชานี้ ให้นักศึกษาดูวิดีโอถึงนาทีที่ 16:00 เท่านั้น)</li>
-<li><a target="_blank" rel="noopener" href="https://youtu.be/JDzf5bY7lgM">How to learn HTTP using Firefox Browser Dev Tools</a> (ความยาว 4:00 นาที)</li>
-</ul>
-<h2 id="สิ่งที่ต้องส่ง"><a href="#สิ่งที่ต้องส่ง" class="headerlink" title="สิ่งที่ต้องส่ง"></a>สิ่งที่ต้องส่ง</h2><p>วิดีโอ โดยให้นักศึกษาจัดระเบียบตาม Handouts 3 – Lab 4 scripts (หาดูได้จากหน้า Handouts)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/30/lab4/" data-id="ckz15i69c0008myt9424e9w50" data-title="LAB 4 -- วันที่ 15 กุมภาพันธ์ พ.ศ. 2564" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-lab3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cn351/2022/01/23/lab3/" class="article-date">
-  <time class="dt-published" datetime="2022-01-23T02:07:42.000Z" itemprop="datePublished">2022-01-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cn351/2022/01/23/lab3/">LAB 3 -- วันที่ 24 มกราคม พ.ศ. 2565</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="ส่วนที่-1-ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้-method-GET-และ-method-POST"><a href="#ส่วนที่-1-ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้-method-GET-และ-method-POST" class="headerlink" title="ส่วนที่ 1: ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้ method GET และ method POST"></a>ส่วนที่ 1: ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้ method GET และ method POST</h2><ol>
-<li>สร้างไฟล์ form-w-get.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า form-input และให้ใช้ method เป็น GET</li>
-<li>สร้างไฟล์ form-w-post.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า form-input และให้ใช้ method เป็น POST</li>
-<li>สร้างไฟล์ get-formhandler.php และ post-formhandler.php สำหรับประมวลผลข้อมูลที่ได้รับจากการกรอกแบบฟอร์มแบบ GET และแบบ POST ตามลำดับ โดยให้แสดงผลลัพธ์เป็น form-input = x โดย x คือ ค่าที่ได้รับจากการกรอกแบบฟอร์มของผู้ใช้</li>
-<li>นำไฟล์ form-w-get.html form-w-post.html get-formhandler.php และไฟล์ post-formhandler.php ไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/">http://targets.local/lab2/</a>….</li>
-<li>ทดสอบโดยใช้ burp suite และ developer tools ใน firefox</li>
-<li>พิจารณาว่าการใช้ GET และ POST นั้นมีความแตกต่างกันอย่างไร แล้วเขียนบรรยายตามความเข้าใจของตนลงในบันทึกแลบ</li>
-</ol>
-<h2 id="ส่วนที่-2-ทดสอบการรับส่ง-hidden-variables"><a href="#ส่วนที่-2-ทดสอบการรับส่ง-hidden-variables" class="headerlink" title="ส่วนที่ 2: ทดสอบการรับส่ง hidden variables"></a>ส่วนที่ 2: ทดสอบการรับส่ง hidden variables</h2><ol>
-<li>ใน directory ชื่อ lab2 สร้างไฟล์ hidden-var-form.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า normal-var และมีการส่ง hidden variable หนึ่งตัวชื่อ hidden-var</li>
-<li>สร้างไฟล์ hidden-var-formhandler.php เพื่อประมวลผลข้อมูลที่ได้รับจากการกรอกแบบฟอร์ม โดยให้แสดงผลลัพธ์เป็น normal-var = x and hidden-var = y โดย x คือ ค่าที่ได้รับจากการกรอกแบบฟอร์มของผู้ใช้ และ y คือ ค่าของ hidden variable</li>
-<li>นำไฟล์ hidden-var-form.html และไฟล์ hidden-var-formhandler.php ไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/">http://targets.local/lab2/</a>….</li>
-<li>ทดสอบโดยใช้ burp suite และ developer tools ใน firefox</li>
-<li>อธิบายว่า hidden variables คืออะไร การรับ-ส่ง hidden variable มีลักษณะอย่างไร</li>
-</ol>
-<h2 id="ส่วนที่-3-ทดสอบการรับส่ง-cookies"><a href="#ส่วนที่-3-ทดสอบการรับส่ง-cookies" class="headerlink" title="ส่วนที่ 3: ทดสอบการรับส่ง cookies"></a>ส่วนที่ 3: ทดสอบการรับส่ง cookies</h2><ol>
-<li>สร้างไฟล์ชื่อ setcookie.php โดยให้มีการทำงานคือ ให้สั่ง server ให้ส่ง cookie ที่มี name เป็น remember และ value เป็น ชื่อของนักศึกษา</li>
-<li>สร้างไฟล์ชื่อ usecookie.php โดยให้มีการทำงานคือ ให้สั่ง server ให้แสดงค่า cookie ที่ได้รับมาจาก browser</li>
-<li>ใช้ burp suite และ firefox quantum ในการสำรวจเนื้อหาของข้อมูลที่มีการแลกเปลี่ยนกันสำหรับทั้งสอง requests ข้างต้น</li>
-<li>อธิบายว่า cookies คืออะไร การรับ-ส่ง cookies มีลักษณะอย่างไร</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/23/lab3/" data-id="ckz15i6970006myt952a51tjv" data-title="LAB 3 -- วันที่ 24 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-tracking-cookies" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cn351/2022/01/23/tracking-cookies/" class="article-date">
-  <time class="dt-published" datetime="2022-01-23T02:06:44.000Z" itemprop="datePublished">2022-01-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cn351/2022/01/23/tracking-cookies/">Handout 2 -- First vs. Third party cookies</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>ให้นักศึกษาอ่านบทความ/ดูวิดีโอต่อไปนี้</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://youtu.be/HFyaW50GFOs">How ads follow you around the Internet (Vox)</a> </li>
-<li><a target="_blank" rel="noopener" href="https://youtu.be/35cWqC-71yw">Ad-trackers using third party cookies</a> </li>
-<li><a target="_blank" rel="noopener" href="https://clearcode.cc/blog/difference-between-first-party-third-party-cookies/">First vs. Third party cookies</a></li>
-<li><a target="_blank" rel="noopener" href="https://youtu.be/QWw7Wd2gUJk">How cookies can track you (Simply Explained)</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/23/tracking-cookies/" data-id="ckz15i69h000cmyt97yr5g6wc" data-title="Handout 2 -- First vs. Third party cookies" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Handouts/" rel="tag">Handouts</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-lab2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cn351/2022/01/17/lab2/" class="article-date">
-  <time class="dt-published" datetime="2022-01-17T08:07:14.000Z" itemprop="datePublished">2022-01-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cn351/2022/01/17/lab2/">LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="ขั้นตอนในการทำแลบ"><a href="#ขั้นตอนในการทำแลบ" class="headerlink" title="ขั้นตอนในการทำแลบ"></a>ขั้นตอนในการทำแลบ</h1><p>แลบนี้ให้นักศึกษาใช้ dojo VM นักศึกษาต้องส่งบันทึกแลบใน MS Teams ในหมวด Assignments ตอนท้ายคาบเรียนด้วย โดยในการตอบคำถามและจดบันทึกที่จะส่งนี้ ให้เขียนฉลากแบ่งให้ชัดเจนว่า คำตอบหรือบันทึกที่ปรากฎอยู่นั้น เป็นคำตอบสำหรับส่วนใดของแลบ กรุณาจดบันทึกอย่างปราณีต และให้นักศึกษาจดในหน้าต่างที่ MS Teams เปิดให้โดยตรง ห้ามแนบไฟล์</p>
-<h2 id="ส่วนที่-0-ทำให้-Virtual-Box-สามารถแสดง-dojo-VM-แบบเต็มจอได้"><a href="#ส่วนที่-0-ทำให้-Virtual-Box-สามารถแสดง-dojo-VM-แบบเต็มจอได้" class="headerlink" title="ส่วนที่ 0: ทำให้ Virtual Box สามารถแสดง dojo VM แบบเต็มจอได้"></a>ส่วนที่ 0: ทำให้ Virtual Box สามารถแสดง dojo VM แบบเต็มจอได้</h2><p>ให้นักศึกษาสืบค้นรายละเอียดวิธีการในการทำให้ Virtual Box สามารถแสดง dojo VM แบบเต็มจอได้ ในบางกรณีโปรแกรมจะสามารถทำได้เองโดยอัตโนมัติ ในบางกรณีอาจต้องติดตั้ง Virtual Box Guest Additions</p>
-<h2 id="ส่วนที่-1-ศึกษาการทำงานพื้นฐานของ-HTTP"><a href="#ส่วนที่-1-ศึกษาการทำงานพื้นฐานของ-HTTP" class="headerlink" title="ส่วนที่ 1: ศึกษาการทำงานพื้นฐานของ HTTP"></a>ส่วนที่ 1: ศึกษาการทำงานพื้นฐานของ HTTP</h2><ol>
-<li>Login เข้า dojo VM</li>
-<li>เปิด terminal ที่ prompt ให้พิมพ์ telnet localhost 80 รอให้ server พร้อมรับอินพุตแล้วพิมพ์ GET /index.html (case sensitive)</li>
-<li>สร้าง directory ชื่อ lab2 ใน home directory ของผู้ใช้ที่นักศึกษาเป็นอยู่ (กล่าวคือผู้ใช้ที่มี username เป็น dojo นักศึกษาสามารถตรวจสอบได้โดยการรันคำสั่ง whoami ที่ terminal prompt)</li>
-<li>copy เอาท์พุตที่ได้รับเก็บไว้ใน file ชื่อ response4getting-web-page-with-telnet.txt ใน directory ชื่อ lab2 ที่นักศึกษาได้สร้างขึ้น</li>
-<li>เปิด text editor ใดก็ได้ที่ถนัด (emacs, gedit, sublime text 3, vi, …) แล้วสร้าง HTML source file ใน directory ชื่อ lab2 โดยตั้งชื่อไฟล์ว่า hello.html ให้เนื้อหาของไฟล์คือแสดงคำว่า Hello World! ในเว็บบราวเซอร์</li>
-<li>นำไฟล์นี้ไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/hello.html">http://targets.local/lab2/hello.html</a></li>
-<li>สร้างแบบฟอร์ม hello-whoever-form.html และสร้างโปรแกรม php ชื่อ hello-whoever.php ที่สามารถแสดงคำว่า Hello xx! ในเว็บบราวเซอร์ โดย xx คือ คำที่ผู้ใช้กรอกลงไปในแบบฟอร์ม</li>
-<li>นำไฟล์ทั้งสองไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/hello-whoever-form.html">http://targets.local/lab2/hello-whoever-form.html</a></li>
-</ol>
-<h2 id="ส่วนที่-2-เรียนรู้การใช้-web-proxy-ชื่อ-Burp-Suite-และ-firefox-quantum"><a href="#ส่วนที่-2-เรียนรู้การใช้-web-proxy-ชื่อ-Burp-Suite-และ-firefox-quantum" class="headerlink" title="ส่วนที่ 2: เรียนรู้การใช้ web proxy ชื่อ Burp Suite และ firefox quantum"></a>ส่วนที่ 2: เรียนรู้การใช้ web proxy ชื่อ Burp Suite และ firefox quantum</h2><ol>
-<li>จงตอบว่า web proxy คืออะไร มีไว้เพื่อประโยชน์อะไร โดยให้เขียนคำตอบลงในบันทึกแลบ</li>
-<li>เปิด shell แล้วพิมพ์ cd tools</li>
-<li>หาวิธีรันโปรแกรม burp suite</li>
-<li>ค้นหาข้อมูลในตัวโปรแกรม burp suite ว่ามีการตั้งค่า default ให้ฟัง port ใดอยู่</li>
-<li>กำหนดให้ firefox web browser เชื่อมต่อกับอินเทอร์เน็ตโดยผ่าน burp suite web proxy ที่ port ที่เหมาะสมก่อน โดยตั้งค่า Connection Settings</li>
-<li>ใช้ firefox เชื่อมต่อไปที่ <a target="_blank" rel="noopener" href="http://targets.local/">http://targets.local</a> หาหน้าต่างที่แสดง request และ response แล้วตอบคำถามต่อไปนี้<ol>
-<li>firefox ส่ง request ไปให้ web server ทั้งหมดกี่ requests</li>
-<li>มี header ใดบ้าง ที่ถูกส่งไปในแต่ละ request</li>
-<li>response สำหรับแต่ละ request มีใจความว่าอะไร</li>
-</ol>
-</li>
-<li>ปิดการเชื่อมต่อผ่าน burp suite สำหรับ firefox</li>
-<li>ใช้ developer tools ใน firefox ในการโหลดหน้า <a target="_blank" rel="noopener" href="http://targets.local/">http://targets.local</a> แล้วหาวิธีการเปรียบเทียบการอ่านเนื้อหาของ request และ response ตาม 3 คำถามในข้อ 6 ข้างต้น</li>
-</ol>
-<h1 id="แหล่งข้อมูลที่อาจเป็นประโยชน์สำหรับแลบนี้"><a href="#แหล่งข้อมูลที่อาจเป็นประโยชน์สำหรับแลบนี้" class="headerlink" title="แหล่งข้อมูลที่อาจเป็นประโยชน์สำหรับแลบนี้"></a>แหล่งข้อมูลที่อาจเป็นประโยชน์สำหรับแลบนี้</h1><ul>
-<li>โครงสร้างของ HTTP requests และ responses: ไทย <a target="_blank" rel="noopener" href="https://siriphonnot.medium.com/%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B9%83%E0%B8%88-http-request-2521db49775d">https://siriphonnot.medium.com/%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B9%83%E0%B8%88-http-request-2521db49775d</a></li>
-<li>โครงสร้างของ HTTP requests และ responses: อังกฤษ <a target="_blank" rel="noopener" href="https://www.practical-go-lessons.com/chap-26-basic-http-server">https://www.practical-go-lessons.com/chap-26-basic-http-server</a> และ <a target="_blank" rel="noopener" href="https://wizardzines.com/comics/anatomy-http-request/">https://wizardzines.com/comics/anatomy-http-request/</a></li>
-<li>การสร้าง PHP forms <a target="_blank" rel="noopener" href="https://www.w3schools.com/php/php_forms.asp">https://www.w3schools.com/php/php_forms.asp</a></li>
-<li>การ telnet เพื่อขอ web page จาก server <a target="_blank" rel="noopener" href="http://support.microsoft.com/kb/279466">http://support.microsoft.com/kb/279466</a></li>
-<li>การตั้งค่า proxy เพื่อให้สามารถใช้อินเตอร์เน็ตผ่านทาง shell ได้ โดย proxy server ของทางคณะมีชื่อว่า proxy.engr และ port ที่ใช้คือ 8080 มีหลายเว็บไซต์ที่อธิบายเรื่องนี้ไว้ เช่น <a target="_blank" rel="noopener" href="http://www.cyberciti.biz/faq/linux-unix-set-proxy-environment-variable/">http://www.cyberciti.biz/faq/linux-unix-set-proxy-environment-variable/</a></li>
-<li>การสร้างฟอร์มที่มี hidden variables <a target="_blank" rel="noopener" href="http://www.w3schools.com/tags/att_input_type.asp">http://www.w3schools.com/tags/att_input_type.asp</a></li>
-<li>การประมวลผลข้อมูลที่ได้รับจาก form <a target="_blank" rel="noopener" href="http://www.w3schools.com/php/php_forms.asp">http://www.w3schools.com/php/php_forms.asp</a> หรือ <a target="_blank" rel="noopener" href="http://www.html-form-guide.com/php-form/php-form-variables.html">http://www.html-form-guide.com/php-form/php-form-variables.html</a></li>
-<li>การบอก web server ให้ใส่ cookie ไว้ใน response ด้วย php <a target="_blank" rel="noopener" href="http://www.w3schools.com/php/func_http_setcookie.asp">http://www.w3schools.com/php/func_http_setcookie.asp</a></li>
-<li>การใช้งาน firefox developer tools <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox">https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/17/lab2/" data-id="ckz15i69a0007myt91bid0l2x" data-title="LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-lab1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cn351/2022/01/06/lab1/" class="article-date">
-  <time class="dt-published" datetime="2022-01-06T08:02:22.000Z" itemprop="datePublished">2022-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cn351/2022/01/06/lab1/">LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="ขั้นตอนในการทำแลบ"><a href="#ขั้นตอนในการทำแลบ" class="headerlink" title="ขั้นตอนในการทำแลบ"></a>ขั้นตอนในการทำแลบ</h2><ol>
-<li><p>ดาวน์โหลดและติดตั้งโปรแกรม Virtualbox</p>
-</li>
-<li><p>ดาวน์โหลดและติดตั้งเครื่องเสมือน <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/websecuritydojo/files/">Web Security Dojo</a> เวอร์ชั่นล่าสุด (ณ ขณะนี้เป็นเวอร์ชั่น 3.4.1) ตั้งชื่อเครื่องนี้ว่า dojo VM</p>
-</li>
-<li><p>ดาวน์โหลด iso image ของ Ubuntu จาก <a target="_blank" rel="noopener" href="https://ubuntu.com/">Ubuntu.com</a> มาเก็บไว้ที่เครื่อง แล้วทำการติดตั้งเป็นเครื่องเสมือนที่ถูกบริหารจัดการด้วย virtualbox ตั้งชื่อเครื่องนี้ว่า Ubuntu VM</p>
-</li>
-<li><p>Login เข้าเครื่อง dojo VM แล้วทำ Unix lab ของ UC Berkeley ตามที่ปรากฏใน <a target="_blank" rel="noopener" href="http://www-inst.eecs.berkeley.edu/~cs61a/fa14/lab/lab00/">http://www-inst.eecs.berkeley.edu/~cs61a/fa14/lab/lab00/</a> เนื่องจากนักศึกษาไม่ใช่นักศึกษาของ UC Berkeley จึงไม่มีบัญชีอยู่ที่นั่น ดังนั้นให้ข้ามสิ่งที่เกี่ยวข้องกับการใช้บัญชีของ UC Berkeley เท่าที่จำเป็น</p>
-</li>
-<li><p>ดาวน์โหลดและติดตั้ง text editor ที่นักศึกษาต้องการใช้ใน Ubuntu VM และ dojo VM แล้ว<em>เรียนรู้วิธีการใช้ให้คล่องแคล่ว</em> โปรแกรม editor ที่นักศึกษาอาจพิจารณาใช้ ได้แก่ Emacs, Visual Studio Code, vi, atom และ sublime text เป็นต้น</p>
-</li>
-<li><p>สำหรับนักศึกษาที่ใช้เครื่อง Windows นักศึกษาอาจทำการตั้งค่าให้เครื่องของตนสามารถใช้งาน WSL2  ในเครื่อง Windows ที่เป็น host ด้วย (หากนักศึกษาใช้ Windows ที่ต่ำกว่าเวอร์ชั่น 11 ต้องทำการติดตั้งโปรแกรมที่ทำหน้าที่เป็น X Server ด้วย เช่น โปรแกรม X410 ที่นักศึกษาสามารถดาวน์โหลดได้จาก Microsoft Store) การทำเช่นนี้จะทำให้มีความสะดวกในการใช้งานมากขึ้น</p>
-</li>
-<li><p>ให้นักศึกษาฝึกใช้คำสั่งตามวิดีโอ <a target="_blank" rel="noopener" href="https://youtu.be/cBokz0LTizk">https://youtu.be/cBokz0LTizk</a> แล้วเขียนรายชื่อคำสั่งที่อยู่ในวิดีโอให้<em>ครบทุกคำสั่ง</em> โดยส่งเป็นการบ้านชื่อ Lab 1 write-up ใน MS Teams ผ่าน OneNote class notebook และให้นักศึกษาอัดวิดีโอแสดงการทำงานตามวิดีโอตัวอย่าง เพื่อส่งเป็นวฺ๊วิดีโอสำหรับ Lab 1 ของตนเอง</p>
-</li>
-<li><p>ในไฟล์เดียวกันกับข้อ 7. ให้นักศึกษาเขียนบรรยายปัญหาหลัก ๆ ที่พบระหว่างการทำแลบพอสังเขปมา 3-5 ข้อ</p>
-</li>
-</ol>
-<p><strong>ในการส่งการบ้านทุกครั้ง</strong> ให้นักศึกษาเขียนชื่อและเลขที่ทะเบียนไว้ที่มุมซ้ายบนของไฟล์ทุกครั้ง และให้นักศึกษาเขียนคำตอบด้วยลายมือของตนเองเท่านั้น ห้ามพิมพ์ ในกรณีที่นักศึกษาไม่มี tablet ให้เขียนคำตอบในกระดาษ ถ่ายรูปแนวตั้ง โฟกัสให้ชัดเจนอ่านง่าย แล้วอัพโหลดรูปภาพใส่ไว้ใน notebook</p>
-<h2 id="ข้อมูลที่อาจเป็นประโยชน์"><a href="#ข้อมูลที่อาจเป็นประโยชน์" class="headerlink" title="ข้อมูลที่อาจเป็นประโยชน์"></a>ข้อมูลที่อาจเป็นประโยชน์</h2><ul>
-<li> วิธีการตั้งค่าและติดตั้ง WSL2 และ Ubuntu ในเครื่อง Windows มีหลายวิธี นักศึกษาอาจลองวิธีที่ง่ายตามที่ปรากฏที่ <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2">https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/lab1/" data-id="ckz15i6910003myt932jcd66e" data-title="LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-info" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cn351/2022/01/06/info/" class="article-date">
-  <time class="dt-published" datetime="2022-01-06T08:01:19.000Z" itemprop="datePublished">2022-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cn351/2022/01/06/info/">Handout 1 -- Course information</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>ให้นักศึกษาดาวน์โหลดและอ่าน <a target="_blank" rel="noopener" href="http://chanathip.ece.engr.tu.ac.th/CN351-PDFS/handouts/info.pdf">Course information</a> ให้ครบถ้วนตั้งแต่ต้นจนจบ</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/info/" data-id="ckz15i68w0001myt941j66a8x" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Handouts/" rel="tag">Handouts</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-welcome" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/cn351/2022/01/06/welcome/" class="article-date">
-  <time class="dt-published" datetime="2022-01-06T03:37:35.000Z" itemprop="datePublished">2022-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/cn351/2022/01/06/welcome/">Welcome to CN351</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>ยินดีต้อนรับสู่วิชา วพ 351</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ผู้สอน:</td>
-<td>รศ.ดร.ชนาทิพย์ นามเปรมปรีดิ์</td>
-</tr>
-<tr>
-<td>เวลา:</td>
-<td>วันจันทร์ 9.30-12.30 น.</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/welcome/" data-id="ckz15i69l000fmyt9cuovcumx" data-title="Welcome to CN351" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Announcements/" rel="tag">Announcements</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-lab4-scripts" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cn351/2021/02/15/lab4-scripts/" class="article-date">
-  <time class="dt-published" datetime="2021-02-15T10:20:37.000Z" itemprop="datePublished">2021-02-15</time>
+    <a href="/cn351/2022/01/31/lab4-scripts/" class="article-date">
+  <time class="dt-published" datetime="2022-01-31T11:00:37.000Z" itemprop="datePublished">2022-01-31</time>
 </a>
     
   </div>
@@ -500,7 +96,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/cn351/2021/02/15/lab4-scripts/">Handout3 -- Lab 4 scripts</a>
+      <a class="p-name article-title" href="/cn351/2022/01/31/lab4-scripts/">Handout3 -- Lab 4 scripts</a>
     </h1>
   
 
@@ -615,11 +211,415 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2021/02/15/lab4-scripts/" data-id="ckz15i69f000bmyt94k70e3sf" data-title="Handout3 -- Lab 4 scripts" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/31/lab4-scripts/" data-id="ckz15je4e0008olt9afwtak19" data-title="Handout3 -- Lab 4 scripts" class="article-share-link">Share</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Handouts/" rel="tag">Handouts</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-lab4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2022/01/30/lab4/" class="article-date">
+  <time class="dt-published" datetime="2022-01-30T11:00:00.000Z" itemprop="datePublished">2022-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2022/01/30/lab4/">LAB 4 -- วันที่ 15 กุมภาพันธ์ พ.ศ. 2564</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="เรียนรู้พื้นฐานที่เกี่ยวข้องกับ-HTTP"><a href="#เรียนรู้พื้นฐานที่เกี่ยวข้องกับ-HTTP" class="headerlink" title="เรียนรู้พื้นฐานที่เกี่ยวข้องกับ HTTP"></a>เรียนรู้พื้นฐานที่เกี่ยวข้องกับ HTTP</h2><p>ให้นักศึกษาปฏิบัติตามวิดีโอ <a target="_blank" rel="noopener" href="https://youtu.be/iYM2zFP3Zn0">HTTP Crash Course &amp; Exploration</a> แล้วอัดวิดีโออธิบายสิ่งที่นักศึกษาทำ ตามลำดับที่ปรากฎในวิดีโอต้นแบบ</p>
+<p>นักศึกษาสามารถคัดลอก code ต่อไปนี้ไปใช้เป็นต้นแบบได้</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express=<span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line">app.use(express.json());</span><br><span class="line">app.use(express.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">	res.send(<span class="string">&#x27;Hello from Express&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">5000</span>, <span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&#x27;Server started on 5000&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="สิ่งที่นักศึกษาควรเรียนรู้ในแลบนี้"><a href="#สิ่งที่นักศึกษาควรเรียนรู้ในแลบนี้" class="headerlink" title="สิ่งที่นักศึกษาควรเรียนรู้ในแลบนี้"></a>สิ่งที่นักศึกษาควรเรียนรู้ในแลบนี้</h2><ul>
+<li>ความแตกต่างระหว่าง GET, POST, PUT, DELETE methods</li>
+<li>ความหมายของ web API และการใช้งาน Postman Client ในการทดสอบ web API</li>
+<li>การใช้งาน web browser developer tools เช่น Firefox หรือ Chrome</li>
+<li>การติดตั้งและตั้งค่า node.js และ express.js สำหรับทำการทดลองส่ง request และรับ response และตรวจสอบค่า HTTP messages ที่ส่งไปให้และได้รับจากเซิร์ฟเวอร์</li>
+</ul>
+<h2 id="สิ่งที่ต้องศึกษาสำหรับแลบนี้"><a href="#สิ่งที่ต้องศึกษาสำหรับแลบนี้" class="headerlink" title="สิ่งที่ต้องศึกษาสำหรับแลบนี้"></a>สิ่งที่ต้องศึกษาสำหรับแลบนี้</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/OVvTv9Hy91Q">What are APIs? - Simply Explained</a> (ความยาว 6:48 นาที)</li>
+<li><a target="_blank" rel="noopener" href="https://www.postman.com/downloads/">Postman Client download</a></li>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/henMP92Dpq0">Postman 101 for Developers</a> (สำหรับวิชานี้ ให้นักศึกษาดูวิดีโอถึงนาทีที่ 16:00 เท่านั้น)</li>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/JDzf5bY7lgM">How to learn HTTP using Firefox Browser Dev Tools</a> (ความยาว 4:00 นาที)</li>
+</ul>
+<h2 id="สิ่งที่ต้องส่ง"><a href="#สิ่งที่ต้องส่ง" class="headerlink" title="สิ่งที่ต้องส่ง"></a>สิ่งที่ต้องส่ง</h2><p>วิดีโอ โดยให้นักศึกษาจัดระเบียบตาม Handouts 3 – Lab 4 scripts (หาดูได้จากหน้า Handouts)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2022/01/30/lab4/" data-id="ckz15je4h000bolt912luhr2d" data-title="LAB 4 -- วันที่ 15 กุมภาพันธ์ พ.ศ. 2564" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-lab3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2022/01/23/lab3/" class="article-date">
+  <time class="dt-published" datetime="2022-01-23T02:07:42.000Z" itemprop="datePublished">2022-01-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2022/01/23/lab3/">LAB 3 -- วันที่ 24 มกราคม พ.ศ. 2565</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="ส่วนที่-1-ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้-method-GET-และ-method-POST"><a href="#ส่วนที่-1-ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้-method-GET-และ-method-POST" class="headerlink" title="ส่วนที่ 1: ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้ method GET และ method POST"></a>ส่วนที่ 1: ศึกษาความแตกต่างระหว่างการแลกเปลี่ยนข้อมูลเมื่อใช้ method GET และ method POST</h2><ol>
+<li>สร้างไฟล์ form-w-get.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า form-input และให้ใช้ method เป็น GET</li>
+<li>สร้างไฟล์ form-w-post.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า form-input และให้ใช้ method เป็น POST</li>
+<li>สร้างไฟล์ get-formhandler.php และ post-formhandler.php สำหรับประมวลผลข้อมูลที่ได้รับจากการกรอกแบบฟอร์มแบบ GET และแบบ POST ตามลำดับ โดยให้แสดงผลลัพธ์เป็น form-input = x โดย x คือ ค่าที่ได้รับจากการกรอกแบบฟอร์มของผู้ใช้</li>
+<li>นำไฟล์ form-w-get.html form-w-post.html get-formhandler.php และไฟล์ post-formhandler.php ไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/">http://targets.local/lab2/</a>….</li>
+<li>ทดสอบโดยใช้ burp suite และ developer tools ใน firefox</li>
+<li>พิจารณาว่าการใช้ GET และ POST นั้นมีความแตกต่างกันอย่างไร แล้วเขียนบรรยายตามความเข้าใจของตนลงในบันทึกแลบ</li>
+</ol>
+<h2 id="ส่วนที่-2-ทดสอบการรับส่ง-hidden-variables"><a href="#ส่วนที่-2-ทดสอบการรับส่ง-hidden-variables" class="headerlink" title="ส่วนที่ 2: ทดสอบการรับส่ง hidden variables"></a>ส่วนที่ 2: ทดสอบการรับส่ง hidden variables</h2><ol>
+<li>ใน directory ชื่อ lab2 สร้างไฟล์ hidden-var-form.html เพื่อแสดงแบบฟอร์มที่มีช่องรับอินพุตเป็น text เพียงหนึ่งช่อง ให้อินพุตนี้มีชื่อว่า normal-var และมีการส่ง hidden variable หนึ่งตัวชื่อ hidden-var</li>
+<li>สร้างไฟล์ hidden-var-formhandler.php เพื่อประมวลผลข้อมูลที่ได้รับจากการกรอกแบบฟอร์ม โดยให้แสดงผลลัพธ์เป็น normal-var = x and hidden-var = y โดย x คือ ค่าที่ได้รับจากการกรอกแบบฟอร์มของผู้ใช้ และ y คือ ค่าของ hidden variable</li>
+<li>นำไฟล์ hidden-var-form.html และไฟล์ hidden-var-formhandler.php ไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/">http://targets.local/lab2/</a>….</li>
+<li>ทดสอบโดยใช้ burp suite และ developer tools ใน firefox</li>
+<li>อธิบายว่า hidden variables คืออะไร การรับ-ส่ง hidden variable มีลักษณะอย่างไร</li>
+</ol>
+<h2 id="ส่วนที่-3-ทดสอบการรับส่ง-cookies"><a href="#ส่วนที่-3-ทดสอบการรับส่ง-cookies" class="headerlink" title="ส่วนที่ 3: ทดสอบการรับส่ง cookies"></a>ส่วนที่ 3: ทดสอบการรับส่ง cookies</h2><ol>
+<li>สร้างไฟล์ชื่อ setcookie.php โดยให้มีการทำงานคือ ให้สั่ง server ให้ส่ง cookie ที่มี name เป็น remember และ value เป็น ชื่อของนักศึกษา</li>
+<li>สร้างไฟล์ชื่อ usecookie.php โดยให้มีการทำงานคือ ให้สั่ง server ให้แสดงค่า cookie ที่ได้รับมาจาก browser</li>
+<li>ใช้ burp suite และ firefox quantum ในการสำรวจเนื้อหาของข้อมูลที่มีการแลกเปลี่ยนกันสำหรับทั้งสอง requests ข้างต้น</li>
+<li>อธิบายว่า cookies คืออะไร การรับ-ส่ง cookies มีลักษณะอย่างไร</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2022/01/23/lab3/" data-id="ckz15je4d0007olt99u6l0axn" data-title="LAB 3 -- วันที่ 24 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-tracking-cookies" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2022/01/23/tracking-cookies/" class="article-date">
+  <time class="dt-published" datetime="2022-01-23T02:06:44.000Z" itemprop="datePublished">2022-01-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2022/01/23/tracking-cookies/">Handout 2 -- First vs. Third party cookies</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>ให้นักศึกษาอ่านบทความ/ดูวิดีโอต่อไปนี้</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/HFyaW50GFOs">How ads follow you around the Internet (Vox)</a> </li>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/35cWqC-71yw">Ad-trackers using third party cookies</a> </li>
+<li><a target="_blank" rel="noopener" href="https://clearcode.cc/blog/difference-between-first-party-third-party-cookies/">First vs. Third party cookies</a></li>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/QWw7Wd2gUJk">How cookies can track you (Simply Explained)</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2022/01/23/tracking-cookies/" data-id="ckz15je4i000dolt9fcog6ydc" data-title="Handout 2 -- First vs. Third party cookies" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Handouts/" rel="tag">Handouts</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-lab2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2022/01/17/lab2/" class="article-date">
+  <time class="dt-published" datetime="2022-01-17T08:07:14.000Z" itemprop="datePublished">2022-01-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2022/01/17/lab2/">LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="ขั้นตอนในการทำแลบ"><a href="#ขั้นตอนในการทำแลบ" class="headerlink" title="ขั้นตอนในการทำแลบ"></a>ขั้นตอนในการทำแลบ</h1><p>แลบนี้ให้นักศึกษาใช้ dojo VM นักศึกษาต้องส่งบันทึกแลบใน MS Teams ในหมวด Assignments ตอนท้ายคาบเรียนด้วย โดยในการตอบคำถามและจดบันทึกที่จะส่งนี้ ให้เขียนฉลากแบ่งให้ชัดเจนว่า คำตอบหรือบันทึกที่ปรากฎอยู่นั้น เป็นคำตอบสำหรับส่วนใดของแลบ กรุณาจดบันทึกอย่างปราณีต และให้นักศึกษาจดในหน้าต่างที่ MS Teams เปิดให้โดยตรง ห้ามแนบไฟล์</p>
+<h2 id="ส่วนที่-0-ทำให้-Virtual-Box-สามารถแสดง-dojo-VM-แบบเต็มจอได้"><a href="#ส่วนที่-0-ทำให้-Virtual-Box-สามารถแสดง-dojo-VM-แบบเต็มจอได้" class="headerlink" title="ส่วนที่ 0: ทำให้ Virtual Box สามารถแสดง dojo VM แบบเต็มจอได้"></a>ส่วนที่ 0: ทำให้ Virtual Box สามารถแสดง dojo VM แบบเต็มจอได้</h2><p>ให้นักศึกษาสืบค้นรายละเอียดวิธีการในการทำให้ Virtual Box สามารถแสดง dojo VM แบบเต็มจอได้ ในบางกรณีโปรแกรมจะสามารถทำได้เองโดยอัตโนมัติ ในบางกรณีอาจต้องติดตั้ง Virtual Box Guest Additions</p>
+<h2 id="ส่วนที่-1-ศึกษาการทำงานพื้นฐานของ-HTTP"><a href="#ส่วนที่-1-ศึกษาการทำงานพื้นฐานของ-HTTP" class="headerlink" title="ส่วนที่ 1: ศึกษาการทำงานพื้นฐานของ HTTP"></a>ส่วนที่ 1: ศึกษาการทำงานพื้นฐานของ HTTP</h2><ol>
+<li>Login เข้า dojo VM</li>
+<li>เปิด terminal ที่ prompt ให้พิมพ์ telnet localhost 80 รอให้ server พร้อมรับอินพุตแล้วพิมพ์ GET /index.html (case sensitive)</li>
+<li>สร้าง directory ชื่อ lab2 ใน home directory ของผู้ใช้ที่นักศึกษาเป็นอยู่ (กล่าวคือผู้ใช้ที่มี username เป็น dojo นักศึกษาสามารถตรวจสอบได้โดยการรันคำสั่ง whoami ที่ terminal prompt)</li>
+<li>copy เอาท์พุตที่ได้รับเก็บไว้ใน file ชื่อ response4getting-web-page-with-telnet.txt ใน directory ชื่อ lab2 ที่นักศึกษาได้สร้างขึ้น</li>
+<li>เปิด text editor ใดก็ได้ที่ถนัด (emacs, gedit, sublime text 3, vi, …) แล้วสร้าง HTML source file ใน directory ชื่อ lab2 โดยตั้งชื่อไฟล์ว่า hello.html ให้เนื้อหาของไฟล์คือแสดงคำว่า Hello World! ในเว็บบราวเซอร์</li>
+<li>นำไฟล์นี้ไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/hello.html">http://targets.local/lab2/hello.html</a></li>
+<li>สร้างแบบฟอร์ม hello-whoever-form.html และสร้างโปรแกรม php ชื่อ hello-whoever.php ที่สามารถแสดงคำว่า Hello xx! ในเว็บบราวเซอร์ โดย xx คือ คำที่ผู้ใช้กรอกลงไปในแบบฟอร์ม</li>
+<li>นำไฟล์ทั้งสองไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab2/hello-whoever-form.html">http://targets.local/lab2/hello-whoever-form.html</a></li>
+</ol>
+<h2 id="ส่วนที่-2-เรียนรู้การใช้-web-proxy-ชื่อ-Burp-Suite-และ-firefox-quantum"><a href="#ส่วนที่-2-เรียนรู้การใช้-web-proxy-ชื่อ-Burp-Suite-และ-firefox-quantum" class="headerlink" title="ส่วนที่ 2: เรียนรู้การใช้ web proxy ชื่อ Burp Suite และ firefox quantum"></a>ส่วนที่ 2: เรียนรู้การใช้ web proxy ชื่อ Burp Suite และ firefox quantum</h2><ol>
+<li>จงตอบว่า web proxy คืออะไร มีไว้เพื่อประโยชน์อะไร โดยให้เขียนคำตอบลงในบันทึกแลบ</li>
+<li>เปิด shell แล้วพิมพ์ cd tools</li>
+<li>หาวิธีรันโปรแกรม burp suite</li>
+<li>ค้นหาข้อมูลในตัวโปรแกรม burp suite ว่ามีการตั้งค่า default ให้ฟัง port ใดอยู่</li>
+<li>กำหนดให้ firefox web browser เชื่อมต่อกับอินเทอร์เน็ตโดยผ่าน burp suite web proxy ที่ port ที่เหมาะสมก่อน โดยตั้งค่า Connection Settings</li>
+<li>ใช้ firefox เชื่อมต่อไปที่ <a target="_blank" rel="noopener" href="http://targets.local/">http://targets.local</a> หาหน้าต่างที่แสดง request และ response แล้วตอบคำถามต่อไปนี้<ol>
+<li>firefox ส่ง request ไปให้ web server ทั้งหมดกี่ requests</li>
+<li>มี header ใดบ้าง ที่ถูกส่งไปในแต่ละ request</li>
+<li>response สำหรับแต่ละ request มีใจความว่าอะไร</li>
+</ol>
+</li>
+<li>ปิดการเชื่อมต่อผ่าน burp suite สำหรับ firefox</li>
+<li>ใช้ developer tools ใน firefox ในการโหลดหน้า <a target="_blank" rel="noopener" href="http://targets.local/">http://targets.local</a> แล้วหาวิธีการเปรียบเทียบการอ่านเนื้อหาของ request และ response ตาม 3 คำถามในข้อ 6 ข้างต้น</li>
+</ol>
+<h1 id="แหล่งข้อมูลที่อาจเป็นประโยชน์สำหรับแลบนี้"><a href="#แหล่งข้อมูลที่อาจเป็นประโยชน์สำหรับแลบนี้" class="headerlink" title="แหล่งข้อมูลที่อาจเป็นประโยชน์สำหรับแลบนี้"></a>แหล่งข้อมูลที่อาจเป็นประโยชน์สำหรับแลบนี้</h1><ul>
+<li>โครงสร้างของ HTTP requests และ responses: ไทย <a target="_blank" rel="noopener" href="https://siriphonnot.medium.com/%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B9%83%E0%B8%88-http-request-2521db49775d">https://siriphonnot.medium.com/%E0%B8%97%E0%B8%B3%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B9%83%E0%B8%88-http-request-2521db49775d</a></li>
+<li>โครงสร้างของ HTTP requests และ responses: อังกฤษ <a target="_blank" rel="noopener" href="https://www.practical-go-lessons.com/chap-26-basic-http-server">https://www.practical-go-lessons.com/chap-26-basic-http-server</a> และ <a target="_blank" rel="noopener" href="https://wizardzines.com/comics/anatomy-http-request/">https://wizardzines.com/comics/anatomy-http-request/</a></li>
+<li>การสร้าง PHP forms <a target="_blank" rel="noopener" href="https://www.w3schools.com/php/php_forms.asp">https://www.w3schools.com/php/php_forms.asp</a></li>
+<li>การ telnet เพื่อขอ web page จาก server <a target="_blank" rel="noopener" href="http://support.microsoft.com/kb/279466">http://support.microsoft.com/kb/279466</a></li>
+<li>การตั้งค่า proxy เพื่อให้สามารถใช้อินเตอร์เน็ตผ่านทาง shell ได้ โดย proxy server ของทางคณะมีชื่อว่า proxy.engr และ port ที่ใช้คือ 8080 มีหลายเว็บไซต์ที่อธิบายเรื่องนี้ไว้ เช่น <a target="_blank" rel="noopener" href="http://www.cyberciti.biz/faq/linux-unix-set-proxy-environment-variable/">http://www.cyberciti.biz/faq/linux-unix-set-proxy-environment-variable/</a></li>
+<li>การสร้างฟอร์มที่มี hidden variables <a target="_blank" rel="noopener" href="http://www.w3schools.com/tags/att_input_type.asp">http://www.w3schools.com/tags/att_input_type.asp</a></li>
+<li>การประมวลผลข้อมูลที่ได้รับจาก form <a target="_blank" rel="noopener" href="http://www.w3schools.com/php/php_forms.asp">http://www.w3schools.com/php/php_forms.asp</a> หรือ <a target="_blank" rel="noopener" href="http://www.html-form-guide.com/php-form/php-form-variables.html">http://www.html-form-guide.com/php-form/php-form-variables.html</a></li>
+<li>การบอก web server ให้ใส่ cookie ไว้ใน response ด้วย php <a target="_blank" rel="noopener" href="http://www.w3schools.com/php/func_http_setcookie.asp">http://www.w3schools.com/php/func_http_setcookie.asp</a></li>
+<li>การใช้งาน firefox developer tools <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox">https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2022/01/17/lab2/" data-id="ckz15je460003olt953oi22er" data-title="LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-lab1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2022/01/06/lab1/" class="article-date">
+  <time class="dt-published" datetime="2022-01-06T08:02:22.000Z" itemprop="datePublished">2022-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2022/01/06/lab1/">LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="ขั้นตอนในการทำแลบ"><a href="#ขั้นตอนในการทำแลบ" class="headerlink" title="ขั้นตอนในการทำแลบ"></a>ขั้นตอนในการทำแลบ</h2><ol>
+<li><p>ดาวน์โหลดและติดตั้งโปรแกรม Virtualbox</p>
+</li>
+<li><p>ดาวน์โหลดและติดตั้งเครื่องเสมือน <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/websecuritydojo/files/">Web Security Dojo</a> เวอร์ชั่นล่าสุด (ณ ขณะนี้เป็นเวอร์ชั่น 3.4.1) ตั้งชื่อเครื่องนี้ว่า dojo VM</p>
+</li>
+<li><p>ดาวน์โหลด iso image ของ Ubuntu จาก <a target="_blank" rel="noopener" href="https://ubuntu.com/">Ubuntu.com</a> มาเก็บไว้ที่เครื่อง แล้วทำการติดตั้งเป็นเครื่องเสมือนที่ถูกบริหารจัดการด้วย virtualbox ตั้งชื่อเครื่องนี้ว่า Ubuntu VM</p>
+</li>
+<li><p>Login เข้าเครื่อง dojo VM แล้วทำ Unix lab ของ UC Berkeley ตามที่ปรากฏใน <a target="_blank" rel="noopener" href="http://www-inst.eecs.berkeley.edu/~cs61a/fa14/lab/lab00/">http://www-inst.eecs.berkeley.edu/~cs61a/fa14/lab/lab00/</a> เนื่องจากนักศึกษาไม่ใช่นักศึกษาของ UC Berkeley จึงไม่มีบัญชีอยู่ที่นั่น ดังนั้นให้ข้ามสิ่งที่เกี่ยวข้องกับการใช้บัญชีของ UC Berkeley เท่าที่จำเป็น</p>
+</li>
+<li><p>ดาวน์โหลดและติดตั้ง text editor ที่นักศึกษาต้องการใช้ใน Ubuntu VM และ dojo VM แล้ว<em>เรียนรู้วิธีการใช้ให้คล่องแคล่ว</em> โปรแกรม editor ที่นักศึกษาอาจพิจารณาใช้ ได้แก่ Emacs, Visual Studio Code, vi, atom และ sublime text เป็นต้น</p>
+</li>
+<li><p>สำหรับนักศึกษาที่ใช้เครื่อง Windows นักศึกษาอาจทำการตั้งค่าให้เครื่องของตนสามารถใช้งาน WSL2  ในเครื่อง Windows ที่เป็น host ด้วย (หากนักศึกษาใช้ Windows ที่ต่ำกว่าเวอร์ชั่น 11 ต้องทำการติดตั้งโปรแกรมที่ทำหน้าที่เป็น X Server ด้วย เช่น โปรแกรม X410 ที่นักศึกษาสามารถดาวน์โหลดได้จาก Microsoft Store) การทำเช่นนี้จะทำให้มีความสะดวกในการใช้งานมากขึ้น</p>
+</li>
+<li><p>ให้นักศึกษาฝึกใช้คำสั่งตามวิดีโอ <a target="_blank" rel="noopener" href="https://youtu.be/cBokz0LTizk">https://youtu.be/cBokz0LTizk</a> แล้วเขียนรายชื่อคำสั่งที่อยู่ในวิดีโอให้<em>ครบทุกคำสั่ง</em> โดยส่งเป็นการบ้านชื่อ Lab 1 write-up ใน MS Teams ผ่าน OneNote class notebook และให้นักศึกษาอัดวิดีโอแสดงการทำงานตามวิดีโอตัวอย่าง เพื่อส่งเป็นวฺ๊วิดีโอสำหรับ Lab 1 ของตนเอง</p>
+</li>
+<li><p>ในไฟล์เดียวกันกับข้อ 7. ให้นักศึกษาเขียนบรรยายปัญหาหลัก ๆ ที่พบระหว่างการทำแลบพอสังเขปมา 3-5 ข้อ</p>
+</li>
+</ol>
+<p><strong>ในการส่งการบ้านทุกครั้ง</strong> ให้นักศึกษาเขียนชื่อและเลขที่ทะเบียนไว้ที่มุมซ้ายบนของไฟล์ทุกครั้ง และให้นักศึกษาเขียนคำตอบด้วยลายมือของตนเองเท่านั้น ห้ามพิมพ์ ในกรณีที่นักศึกษาไม่มี tablet ให้เขียนคำตอบในกระดาษ ถ่ายรูปแนวตั้ง โฟกัสให้ชัดเจนอ่านง่าย แล้วอัพโหลดรูปภาพใส่ไว้ใน notebook</p>
+<h2 id="ข้อมูลที่อาจเป็นประโยชน์"><a href="#ข้อมูลที่อาจเป็นประโยชน์" class="headerlink" title="ข้อมูลที่อาจเป็นประโยชน์"></a>ข้อมูลที่อาจเป็นประโยชน์</h2><ul>
+<li> วิธีการตั้งค่าและติดตั้ง WSL2 และ Ubuntu ในเครื่อง Windows มีหลายวิธี นักศึกษาอาจลองวิธีที่ง่ายตามที่ปรากฏที่ <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2">https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/lab1/" data-id="ckz15je4b0006olt93dpd2afe" data-title="LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-info" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2022/01/06/info/" class="article-date">
+  <time class="dt-published" datetime="2022-01-06T08:01:19.000Z" itemprop="datePublished">2022-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2022/01/06/info/">Handout 1 -- Course information</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>ให้นักศึกษาดาวน์โหลดและอ่าน <a target="_blank" rel="noopener" href="http://chanathip.ece.engr.tu.ac.th/CN351-PDFS/handouts/info.pdf">Course information</a> ให้ครบถ้วนตั้งแต่ต้นจนจบ</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/info/" data-id="ckz15je410001olt9c6tn5lvu" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Handouts/" rel="tag">Handouts</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-welcome" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2022/01/06/welcome/" class="article-date">
+  <time class="dt-published" datetime="2022-01-06T03:37:35.000Z" itemprop="datePublished">2022-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2022/01/06/welcome/">Welcome to CN351</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>ยินดีต้อนรับสู่วิชา วพ 351</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ผู้สอน:</td>
+<td>รศ.ดร.ชนาทิพย์ นามเปรมปรีดิ์</td>
+</tr>
+<tr>
+<td>เวลา:</td>
+<td>วันจันทร์ 9.30-12.30 น.</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/welcome/" data-id="ckz15je4m000golt93125e6br" data-title="Welcome to CN351" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Announcements/" rel="tag">Announcements</a></li></ul>
 
     </footer>
   </div>
@@ -661,7 +661,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2021/02/">February 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2022/01/">January 2022</a></li></ul>
     </div>
   </div>
 
@@ -672,6 +672,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/cn351/2022/01/31/lab4-scripts/">Handout3 -- Lab 4 scripts</a>
+          </li>
         
           <li>
             <a href="/cn351/2022/01/30/lab4/">LAB 4 -- วันที่ 15 กุมภาพันธ์ พ.ศ. 2564</a>
@@ -687,10 +691,6 @@
         
           <li>
             <a href="/cn351/2022/01/17/lab2/">LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565</a>
-          </li>
-        
-          <li>
-            <a href="/cn351/2022/01/06/lab1/">LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565</a>
           </li>
         
       </ul>
