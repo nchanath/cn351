@@ -82,6 +82,79 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-lab6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2022/02/13/lab6/" class="article-date">
+  <time class="dt-published" datetime="2022-02-13T12:00:25.000Z" itemprop="datePublished">2022-02-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2022/02/13/lab6/">LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Bypassing-Client-Side-Controls"><a href="#Bypassing-Client-Side-Controls" class="headerlink" title="Bypassing Client-Side Controls"></a>Bypassing Client-Side Controls</h1><p>ในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Parameter Tampering </p>
+<h2 id="วัตถุประสงค์"><a href="#วัตถุประสงค์" class="headerlink" title="วัตถุประสงค์"></a>วัตถุประสงค์</h2><ul>
+<li>เพื่อศึกษาการแก้ไขข้อมูลทั้งในส่วนของ browser request และ server response เพื่อให้เห็นว่าการตรวจสอบข้อมูลที่ user กรอกด้วยกลไกต่าง ๆ บน client นั้น เป็นสิ่งที่ไม่มีประสิทธิภาพเพียงพอในการป้องกันการโจมตีในรูปแบบต่าง ๆ</li>
+<li>เพื่อแสดงให้เห็นว่า hidden fields นั้น จริง ๆ แล้ว ถูกซ่อนไว้บนหน้าจอของ web browser เท่านั้น user บนเครื่อง client ยังสามารถเข้าถึงข้อมูลส่วนนี้ได้โดยง่าย</li>
+<li>เพื่อให้เห็นความสำคัญของการตรวจสอบความถูกต้องของข้อมูลที่ผู้ใช้กรอก (โดยผู้ตรวจสอบต้องเป็นฝั่ง server)</li>
+<li>เพื่อศึกษาการใช้งาน burp suite</li>
+<li>เพื่อศึกษาการใช้งาน firefox developer tools</li>
+</ul>
+<h2 id="ขั้นตอนการทำแลบ"><a href="#ขั้นตอนการทำแลบ" class="headerlink" title="ขั้นตอนการทำแลบ"></a>ขั้นตอนการทำแลบ</h2><ol>
+<li>Boot เครื่องเสมือนชื่อ web security dojo</li>
+<li>Start โปรแกรม firefox</li>
+<li>Start โปรแกรม burp suite</li>
+<li>ตรวจสอบว่า burp ดักจับ TCP connection ที่ port ใด แล้วตั้งค่าให้ burp ดักจับ connection ของ firefox</li>
+<li>start webgoat ในเครื่อง</li>
+<li>ทำแลบ Webgoat Parameter Tampering
+<ol type='a'>
+<li>ทำแลบโดยใช้ burp suite</li>
+<li>ทำแลบโดยใช้ firefox developer tools</li>
+</ol>
+</li>
+<li>การโจมตีในข้อ 6.1 มี**แนวคิด**อย่างไร จงอธิบาย</li>
+<li>การโจมตีในข้อ 6.2 มี**แนวคิด**อย่างไร จงอธิบาย</li>
+<li>การโจมตีในข้อ 6.1 และ 6.2 มี**แนวคิด**ต่างกันอย่างไร จงอธิบาย</li>
+<li>จงหาคำตอบว่า Javascript code ในการ validate รูปแบบของข้อมูลนั้น มีลักษณะอย่างไร อยู่ที่ไหน ให้นักศึกษาเขียนคำบรรยายสรุปการทำงานของโค้ดในส่วนนี้</li>
+</ol>
+
+<h2 id="ข้อมูลที่อาจเป็นประโยชน์"><a href="#ข้อมูลที่อาจเป็นประโยชน์" class="headerlink" title="ข้อมูลที่อาจเป็นประโยชน์"></a>ข้อมูลที่อาจเป็นประโยชน์</h2><ul>
+<li>ข้อมูลพื้นฐานเกี่ยวกับ Javascript regular expression object: <a target="_blank" rel="noopener" href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp">http://www.w3schools.com/jsref/jsref_obj_regexp.asp</a></li>
+</ul>
+<h2 id="สิ่งที่ต้องส่ง"><a href="#สิ่งที่ต้องส่ง" class="headerlink" title="สิ่งที่ต้องส่ง"></a>สิ่งที่ต้องส่ง</h2><ul>
+<li>วิดีโอแสดงการทำแลบ กำหนดส่ง 23.59 น. 17 กุมภาพันธ์ 2565</li>
+<li>คำตอบในข้อ 7-10 กำหนดส่ง 23.59 น. 17 กุมภาพันธ์ 2565</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2022/02/13/lab6/" data-id="ckzh6184x000gkft966rvfeal" data-title="LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-lab5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/cn351/2022/02/06/lab5/" class="article-date">
@@ -122,7 +195,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/02/06/lab5/" data-id="ckzb7ouu6000dsst97dz1h8iu" data-title="LAB 5 -- วันที่ 7 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/02/06/lab5/" data-id="ckzh6184v000dkft9583l1rlx" data-title="LAB 5 -- วันที่ 7 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -265,7 +338,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/31/lab4-scripts/" data-id="ckzb7ouu10008sst9dcpe47sd" data-title="Handout3 -- Lab 4 scripts" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/31/lab4-scripts/" data-id="ckzh6184s0008kft9gemn8rvr" data-title="Handout3 -- Lab 4 scripts" class="article-share-link">Share</a>
       
       
       
@@ -323,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/30/lab4/" data-id="ckzb7ouu4000bsst9cy4wewb3" data-title="LAB 4 -- วันที่ 31 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/30/lab4/" data-id="ckzh6184u000bkft96l33dc09" data-title="LAB 4 -- วันที่ 31 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -384,7 +457,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/23/lab3/" data-id="ckzb7outz0007sst957fm598u" data-title="LAB 3 -- วันที่ 24 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/23/lab3/" data-id="ckzh6184r0007kft994l8anhv" data-title="LAB 3 -- วันที่ 24 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -431,7 +504,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/23/tracking-cookies/" data-id="ckzb7ouua000gsst9gx5s3n8k" data-title="Handout 2 -- First vs. Third party cookies" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/23/tracking-cookies/" data-id="ckzh6184y000ikft91lsgcjvy" data-title="Handout 2 -- First vs. Third party cookies" class="article-share-link">Share</a>
       
       
       
@@ -509,7 +582,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/17/lab2/" data-id="ckzb7outx0006sst9fdax50zc" data-title="LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/17/lab2/" data-id="ckzh6184q0006kft9bk875yxa" data-title="LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -571,7 +644,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/lab1/" data-id="ckzb7outq0003sst9cixqa3x9" data-title="LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/lab1/" data-id="ckzh6184n0003kft94ssc7565" data-title="LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -612,7 +685,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/info/" data-id="ckzb7outj0001sst96gp67j1y" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/info/" data-id="ckzh6184k0001kft9ggz92pyg" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
       
       
       
@@ -669,7 +742,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/welcome/" data-id="ckzb7ouuc000isst9f5539278" data-title="Welcome to CN351" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/welcome/" data-id="ckzh61850000lkft9hw3g30qh" data-title="Welcome to CN351" class="article-share-link">Share</a>
       
       
       
@@ -728,6 +801,10 @@
       <ul>
         
           <li>
+            <a href="/cn351/2022/02/13/lab6/">LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565</a>
+          </li>
+        
+          <li>
             <a href="/cn351/2022/02/06/lab5/">LAB 5 -- วันที่ 7 กุมภาพันธ์ พ.ศ. 2565</a>
           </li>
         
@@ -741,10 +818,6 @@
         
           <li>
             <a href="/cn351/2022/01/23/lab3/">LAB 3 -- วันที่ 24 มกราคม พ.ศ. 2565</a>
-          </li>
-        
-          <li>
-            <a href="/cn351/2022/01/23/tracking-cookies/">Handout 2 -- First vs. Third party cookies</a>
           </li>
         
       </ul>
