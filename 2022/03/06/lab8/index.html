@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565 | CN351 Web Application Security Course Website</title>
+  <title>LAB 8 -- วันที่ 7 มีนาคม พ.ศ. 2565 | CN351 Web Application Security Course Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Bypassing Client-Side Controlsในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Parameter Tampering  วัตถุประสงค์ เพื่อศึกษาการแก้ไขข้อมูลทั้งในส่วนของ browser request และ serve">
+  <meta name="description" content="Session management vulnerabilitiesในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Session Management Flaws โดยให้ข้ามหัวข้อแรกคือเรื่อง Hijack a session ขั้นตอนการทำแลบ Boot เ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565">
-<meta property="og:url" content="https://nchanath.github.io/cn351/2022/02/13/lab6/index.html">
+<meta property="og:title" content="LAB 8 -- วันที่ 7 มีนาคม พ.ศ. 2565">
+<meta property="og:url" content="https://nchanath.github.io/cn351/2022/03/06/lab8/index.html">
 <meta property="og:site_name" content="CN351 Web Application Security Course Website">
-<meta property="og:description" content="Bypassing Client-Side Controlsในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Parameter Tampering  วัตถุประสงค์ เพื่อศึกษาการแก้ไขข้อมูลทั้งในส่วนของ browser request และ serve">
+<meta property="og:description" content="Session management vulnerabilitiesในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Session Management Flaws โดยให้ข้ามหัวข้อแรกคือเรื่อง Hijack a session ขั้นตอนการทำแลบ Boot เ">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-13T12:00:25.000Z">
-<meta property="article:modified_time" content="2022-02-10T15:58:17.320Z">
+<meta property="article:published_time" content="2022-03-06T05:00:25.000Z">
+<meta property="article:modified_time" content="2022-03-06T05:16:47.330Z">
 <meta property="article:author" content="Chanathip Namprempre">
 <meta property="article:tag" content="Labs">
 <meta name="twitter:card" content="summary">
@@ -83,10 +83,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-lab6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-lab8" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/cn351/2022/02/13/lab6/" class="article-date">
-  <time class="dt-published" datetime="2022-02-13T12:00:25.000Z" itemprop="datePublished">2022-02-13</time>
+    <a href="/cn351/2022/03/06/lab8/" class="article-date">
+  <time class="dt-published" datetime="2022-03-06T05:00:25.000Z" itemprop="datePublished">2022-03-06</time>
 </a>
     
   </div>
@@ -97,7 +97,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565
+      LAB 8 -- วันที่ 7 มีนาคม พ.ศ. 2565
     </h1>
   
 
@@ -105,44 +105,29 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Bypassing-Client-Side-Controls"><a href="#Bypassing-Client-Side-Controls" class="headerlink" title="Bypassing Client-Side Controls"></a>Bypassing Client-Side Controls</h1><p>ในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Parameter Tampering </p>
-<h2 id="วัตถุประสงค์"><a href="#วัตถุประสงค์" class="headerlink" title="วัตถุประสงค์"></a>วัตถุประสงค์</h2><ul>
-<li>เพื่อศึกษาการแก้ไขข้อมูลทั้งในส่วนของ browser request และ server response เพื่อให้เห็นว่าการตรวจสอบข้อมูลที่ user กรอกด้วยกลไกต่าง ๆ บน client นั้น เป็นสิ่งที่ไม่มีประสิทธิภาพเพียงพอในการป้องกันการโจมตีในรูปแบบต่าง ๆ</li>
-<li>เพื่อแสดงให้เห็นว่า hidden fields นั้น จริง ๆ แล้ว ถูกซ่อนไว้บนหน้าจอของ web browser เท่านั้น user บนเครื่อง client ยังสามารถเข้าถึงข้อมูลส่วนนี้ได้โดยง่าย</li>
-<li>เพื่อให้เห็นความสำคัญของการตรวจสอบความถูกต้องของข้อมูลที่ผู้ใช้กรอก (โดยผู้ตรวจสอบต้องเป็นฝั่ง server)</li>
-<li>เพื่อศึกษาการใช้งาน burp suite</li>
-<li>เพื่อศึกษาการใช้งาน firefox developer tools</li>
-</ul>
+        <h1 id="Session-management-vulnerabilities"><a href="#Session-management-vulnerabilities" class="headerlink" title="Session management vulnerabilities"></a>Session management vulnerabilities</h1><p>ในแลบนี้นักศึกษาจะใช้ web security dojo VM และทำแบบฝึกหัด WebGoat เรื่อง Session Management Flaws โดยให้ข้ามหัวข้อแรกคือเรื่อง Hijack a session</p>
 <h2 id="ขั้นตอนการทำแลบ"><a href="#ขั้นตอนการทำแลบ" class="headerlink" title="ขั้นตอนการทำแลบ"></a>ขั้นตอนการทำแลบ</h2><ol>
 <li>Boot เครื่องเสมือนชื่อ web security dojo</li>
-<li>Start โปรแกรม firefox</li>
-<li>Start โปรแกรม burp suite</li>
-<li>ตรวจสอบว่า burp ดักจับ TCP connection ที่ port ใด แล้วตั้งค่าให้ burp ดักจับ connection ของ firefox</li>
-<li>start webgoat ในเครื่อง</li>
-<li>ทำแลบ Webgoat Parameter Tampering
-<ol type='a'>
-<li>ทำแลบโดยใช้ burp suite</li>
-<li>ทำแลบโดยใช้ firefox developer tools</li>
-</ol>
-</li>
-<li>การโจมตีในข้อ 6.1 มี**แนวคิด**อย่างไร จงอธิบาย</li>
-<li>การโจมตีในข้อ 6.2 มี**แนวคิด**อย่างไร จงอธิบาย</li>
-<li>การโจมตีในข้อ 6.1 และ 6.2 มี**แนวคิด**ต่างกันอย่างไร จงอธิบาย</li>
-<li>จงหาคำตอบว่า Javascript code ในการ validate รูปแบบของข้อมูลนั้น มีลักษณะอย่างไร อยู่ที่ไหน ให้นักศึกษาเขียนคำบรรยายสรุปการทำงานของโค้ดในส่วนนี้</li>
-</ol>
-
-<h2 id="ข้อมูลที่อาจเป็นประโยชน์"><a href="#ข้อมูลที่อาจเป็นประโยชน์" class="headerlink" title="ข้อมูลที่อาจเป็นประโยชน์"></a>ข้อมูลที่อาจเป็นประโยชน์</h2><ul>
-<li>ข้อมูลพื้นฐานเกี่ยวกับ Javascript regular expression object: <a target="_blank" rel="noopener" href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp">http://www.w3schools.com/jsref/jsref_obj_regexp.asp</a></li>
+<li>Start WebGoat</li>
+<li>ทำแลบ Session Management Flaws โดยให้ใช้
+<ul>
+<li>burp suite (ใช้สำหรับดักจับข้อมูลระหว่าง browser และ server)</li>
+<li>firefox (ใช้ในการสำรวจ source code) เท่านั้น</li>
 </ul>
-<h2 id="สิ่งที่ต้องส่ง"><a href="#สิ่งที่ต้องส่ง" class="headerlink" title="สิ่งที่ต้องส่ง"></a>สิ่งที่ต้องส่ง</h2><ul>
-<li>วิดีโอแสดงการทำแลบ กำหนดส่ง 23.59 น. 17 กุมภาพันธ์ 2565</li>
-<li>คำตอบในข้อ 7-10 กำหนดส่ง 23.59 น. 17 กุมภาพันธ์ 2565</li>
-</ul>
+ห้ามใช้เครื่องมืออำนวยความสะดวกอื่น ๆ เช่น Tamper Data, Live HTTP headers ฯลฯ</li>
+<li>เขียนข้อสรุปสั้น ๆ เพื่ออธิบายในแต่ละข้อถึง
+<ul>
+<li>สาเหตุที่ทำให้เกิดช่องโหว่ และ</li>
+<li>แนวคิดในการโจมตีของนักศึกษา (เขียนโดยละเอียดพอประมาณ)</li>
+<li>แนวคิดในการปิดหรือรับมือกับช่องโหว่ (เขียนโดยละเอียดพอประมาณ)</li>
+</ul></li>
+<li>ในหัวข้อ Spoof an authentication cookie จงเขียนบรรยายขั้นตอนการทำงานของ algorithm ในการสร้าง cookie ของเว็บแอพพลิเคชั่นที่นักศึกษาทำการโจมตี</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/02/13/lab6/" data-id="cl0etoq4d000di6t92nghft8q" data-title="LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/03/06/lab8/" data-id="cl0etoq4o000li6t9hngddvf1" data-title="LAB 8 -- วันที่ 7 มีนาคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -154,19 +139,10 @@
     
 <nav id="article-nav">
   
-    <a href="/cn351/2022/02/20/lab7/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          LAB 7 -- วันที่ 21 กุมภาพันธ์ พ.ศ. 2565
-        
-      </div>
-    </a>
   
-  
-    <a href="/cn351/2022/02/06/lab5/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/cn351/2022/02/20/lab7/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">LAB 5 -- วันที่ 7 กุมภาพันธ์ พ.ศ. 2565</div>
+      <div class="article-nav-title">LAB 7 -- วันที่ 21 กุมภาพันธ์ พ.ศ. 2565</div>
     </a>
   
 </nav>
