@@ -146,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/17/lab2/" data-id="cl0ynijdy00077tt9e77c24w0" data-title="LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/17/lab2/" data-id="cl18h2eo50008x5t9bh8ta8m4" data-title="LAB 2 -- วันที่ 17 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -208,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/lab1/" data-id="cl0ynijdu00037tt9erb07kev" data-title="LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/lab1/" data-id="cl18h2ens0003x5t96eyj5usr" data-title="LAB 1 -- วันที่ 10 มกราคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -249,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/info/" data-id="cl0ynijdq00017tt98yesc2lr" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/info/" data-id="cl18h2enl0001x5t96gqy34ku" data-title="Handout 1 -- Course information" class="article-share-link">Share</a>
       
       
       
@@ -306,11 +306,84 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/06/welcome/" data-id="cl0ynijea000r7tt96yxk38em" data-title="Welcome to CN351" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/06/welcome/" data-id="cl18h2ep0000vx5t9cxqmc8na" data-title="Welcome to CN351" class="article-share-link">Share</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Announcements/" rel="tag">Announcements</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-lab11" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/cn351/2021/03/27/lab11/" class="article-date">
+  <time class="dt-published" datetime="2021-03-27T12:40:25.000Z" itemprop="datePublished">2021-03-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/cn351/2021/03/27/lab11/">LAB 11 -- วันที่ 28 มีนาคม พ.ศ. 2565</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Cross-site-scripting-XSS"><a href="#Cross-site-scripting-XSS" class="headerlink" title="Cross-site scripting (XSS)"></a>Cross-site scripting (XSS)</h1><p>แลบวันนี้มีเนื้อหาเกี่ยวกับ Cross site scripting (XSS) vulnerabilities ให้นักศึกษาทำแลบดังต่อไปนี้</p>
+<ol>
+<li><p>  Introduction to JavaScript ที่ W3schools เรื่อง JavaScript tutorial <a target="_blank" rel="noopener" href="http://www.w3schools.com/js/default.asp">http://www.w3schools.com/js/default.asp</a> โดยให้ทำ 4 หัวข้อแรก (home, introduction, where to, output)</p>
+</li>
+<li><p>ในเครื่อง Dojo VM </p>
+<ul>
+<li>สร้างแบบฟอร์ม hello-whoever-form.html และสร้างโปรแกรมชื่อ hello-whoever.php ที่สามารถแสดงคำว่า Hello xx! ในเว็บบราวเซอร์ โดย xx คือ คำที่ผู้ใช้กรอกลงไปในแบบฟอร์ม และ method ในการเรียกโปรแกรมเป็น POST จากนั้นให้นำไฟล์ทั้งสองไปวางไว้ในที่ที่เหมาะสม เพื่อให้สามารถเข้าถึงได้โดยผ่าน URL <a target="_blank" rel="noopener" href="http://targets.local/lab11/hello-whoever-form.html">http://targets.local/lab11/hello-whoever-form.html</a></li>
+<li>เพิ่มการตั้งค่า cookie ใน hello-whoever.php โดยนักศึกษาสามารถตั้งค่า cookie ให้เป็นค่าใดก็ได้ที่ต้องการ</li>
+<li>แสดงให้เห็นว่าการทำงานของสองไฟล์นี้ ก่อให้เกิดช่องโหว่แบบ cross-site scripting โดยการแสดงให้เห็นว่า ผู้ร้ายสามารถใช้ javascript ทำการ pop up หน้าต่างที่แสดงค่า cookie ของผู้ใช้ได้ เมื่อผู้ใช้ถูกหลอกให้พิมพ์ค่าอินพุตบางอย่างลงในแบบฟอร์ม (หรือถูกหลอกให้ submit แบบฟอร์มที่มีค่าอินพุตนั้นโดยไม่รู้ตัว)</li>
+</ul>
+</li>
+<li><p>ในเครื่อง Dojo VM ทำแลบ WebGoat ในหัวข้อต่อไปนี้</p>
+<ul>
+<li>LAB: Cross Site Scripting: stages 1, 3, 5</li>
+<li>Stored XSS attacks</li>
+<li>Reflected XSS attacks</li>
+</ul>
+</li>
+</ol>
+<h2 id="รายงานแลบ"><a href="#รายงานแลบ" class="headerlink" title="รายงานแลบ"></a>รายงานแลบ</h2><p>สำหรับแต่ละหัวข้อในส่วน WebGoat ให้เขียนสรุปสั้น ๆ เพื่ออธิบาย<strong>ในแต่ละข้อ</strong>ถึง</p>
+<ul>
+<li>  สาเหตุที่ทำให้เกิดช่องโหว่ และ</li>
+<li>  แนวคิดในการโจมตีของนักศึกษา (เขียนโดยละเอียดพอประมาณ) และ</li>
+<li>  แนวคิดในการปิดหรือรับมือกับช่องโหว่ (เขียนโดยละเอียดพอประมาณ)</li>
+</ul>
+<h2 id="ข้อมูลพื้นฐานเกี่ยวกับ-Javascript-ที่อาจเป็นประโยชน์ต่อการทำแลบ"><a href="#ข้อมูลพื้นฐานเกี่ยวกับ-Javascript-ที่อาจเป็นประโยชน์ต่อการทำแลบ" class="headerlink" title="ข้อมูลพื้นฐานเกี่ยวกับ Javascript ที่อาจเป็นประโยชน์ต่อการทำแลบ"></a>ข้อมูลพื้นฐานเกี่ยวกับ Javascript ที่อาจเป็นประโยชน์ต่อการทำแลบ</h2><ul>
+<li>  <a target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_ajax_intro.asp">AJAX basics</a></li>
+<li>  <a target="_blank" rel="noopener" href="http://www.w3schools.com/js/js_htmldom_elements.asp">Lesson</a> on accessing HTML DOM elements with Javascript </li>
+<li>  <a target="_blank" rel="noopener" href="http://www.javaworld.com/article/2077176/scripting-jvm-languages/using-javascript-and-forms.html">Article</a> on Javascript and HTML forms </li>
+<li>  Description of <a target="_blank" rel="noopener" href="https://medium.com/iocscan/reflected-cross-site-scripting-r-xss-b06c3e8d638a">reflected XSS</a></li>
+<li>  Description of <a target="_blank" rel="noopener" href="https://medium.com/iocscan/persistent-cross-site-scripting-p-xss-557c70377554">stored XSS</a></li>
+<li>  Description of <a target="_blank" rel="noopener" href="https://medium.com/iocscan/dom-based-cross-site-scripting-dom-xss-3396453364fd">DOM-based XSS</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://nchanath.github.io/cn351/2021/03/27/lab11/" data-id="cl18h2eo30007x5t90onf0zpf" data-title="LAB 11 -- วันที่ 28 มีนาคม พ.ศ. 2565" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cn351/tags/Labs/" rel="tag">Labs</a></li></ul>
 
     </footer>
   </div>
@@ -357,7 +430,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2022/01/">January 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/cn351/archives/2021/03/">March 2021</a></li></ul>
     </div>
   </div>
 
@@ -370,7 +443,7 @@
       <ul>
         
           <li>
-            <a href="/cn351/2022/03/19/lab10/">LAB 10 -- วันที่ 20 มีนาคม พ.ศ. 2565</a>
+            <a href="/cn351/2022/03/19/lab10/">LAB 10 -- วันที่ 21 มีนาคม พ.ศ. 2565</a>
           </li>
         
           <li>
