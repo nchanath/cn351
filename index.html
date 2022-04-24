@@ -104,18 +104,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="JSON-Web-Tokens-JWT"><a href="#JSON-Web-Tokens-JWT" class="headerlink" title="JSON Web Tokens (JWT)"></a>JSON Web Tokens (JWT)</h1><p>เนื่องจากแลบนี้ มีเนื้อหาหลักที่นักศึกษาส่วนใหญ่อาจยังไม่เคยเรียนรู้มาก่อน เราจะทำแลบไปพร้อม ๆ กันในชั้นเรียน ให้นักศึกษาเตรียมการก่อนเรียน อย่างน้อยใน 2 ส่วนต่อไปนี้</p>
+        <h1 id="JSON-Web-Tokens-JWT"><a href="#JSON-Web-Tokens-JWT" class="headerlink" title="JSON Web Tokens (JWT)"></a>JSON Web Tokens (JWT)</h1><p>เนื่องจากแลบนี้ มีเนื้อหาบางส่วนที่นักศึกษาอาจยังไม่เคยเรียนรู้มาก่อน ให้นักศึกษาเตรียมการก่อนเรียน อย่างน้อยใน 2 ส่วนต่อไปนี้</p>
 <ul>
-<li>อ่าน README.md ที่ <a target="_blank" rel="noopener" href="https://github.com/mdailey/minimal-jwt">https://github.com/mdailey/minimal-jwt</a> โดยละเอียด เพื่อทำความเข้าใจหลักการคร่าว ๆ ของการเขียน single-page application (SPA) ด้วย nodejs โดยใช้ framework ที่ชื่อ express</li>
+<li>อ่าน README.md ที่ <a target="_blank" rel="noopener" href="https://github.com/mdailey/minimal-jwt">https://github.com/mdailey/minimal-jwt</a> โดยละเอียด เพื่อทำความเข้าใจหลักการคร่าว ๆ ของการเขียน single-page application (SPA) ด้วย nodejs โดยใช้ express framework</li>
 <li>เตรียมเครื่องคอมพิวเตอร์ของตนให้สามารถรองรับการเขียนและการทดสอบ web applications ที่เขียนด้วย nodejs บน server และ javascript บน client ได้ ในส่วนนี้ผู้เขียน tutorial (Professor Matthew Dailey) ใช้ ubuntu แบบ native และอาจารย์เองจะใช้ ubuntu ที่รันบน windows ผ่าน Windows Subsystem for Linux (WSL2) นักศึกษาสามารถทำแลบบน windows ได้ถ้าถนัดกว่า แต่หากเกิดปัญหา อาจารย์อาจไม่สามารถช่วยแก้ปัญหาได้ในเวลาเรียน อย่างไรก็ดี ไม่ว่านักศึกษาจะใช้วิธีการใด ให้นักศึกษาลงโปรแกรม editor ที่ตนเองถนัด (เช่น vscode, emacs, vi, atom, sublime ฯลฯ) และเตรียมสภาพแวดล้อมในการเขียนและการทดสอบโปรแกรมไว้ให้เรียบร้อย (เช่น terminal, firefox quantum ฯลฯ)</li>
 </ul>
-<p>ถ้าเป็นไปได้ นักศึกษาควรลองทำตาม README.md ก่อนเข้าชั้นเรียนในวันพรุ่งนี้ก่อน โดยเฉพาะอย่างยิ่งในขั้นตอนแรก ๆ เช่น การลง packages ต่าง ๆ เช่น curl, nodejs, express การทดสอบ nodejs web server การเรียกไฟล์ index.html ผ่านบราวเซอร์เพื่อดูผลลัพธ์ เป็นต้น หากทุกคนเซ็ตระบบให้เรียบร้อยก่อนเข้าเรียน เราจะสามารถใช้เวลาในการศึกษาทำความเข้าใจเนื้อหาเรื่องการทำ authentication และ authorization ผ่านการใช้ JWT (JSON Web Token) ได้อย่างเต็มที่ เพื่อให้เข้าใจว่าเหตุใด JWT จึงไม่ใช่วิธีการที่ดีในการทำ web authentication</p>
-<h2 id="รายงานแลบ"><a href="#รายงานแลบ" class="headerlink" title="รายงานแลบ"></a>รายงานแลบ</h2><p>ให้นักศึกษาอัดวิดีโอ 1 วิดีโอ ที่แสดงการทำงานที่เกิดขึ้น เมื่อนักศึกษาปฏิบัติตามคำสั่งในแต่ละข้อดังต่อไปนี้ ข้อ 4, 5, 6, 7, 8, 9, 10, Preventing XSS, Preventing CSRF, และ POWS<br>ในวิดีโอ ให้นักศึกษาระบุ__อย่างชัดเจน__ว่าส่วนใดในวิดีโอเป็นการแสดงการทำงานสำหรับคำสั่งในข้อใด</p>
+<p>ถ้าเป็นไปได้ นักศึกษาควรลองทำตาม README.md ก่อนเข้าชั้นเรียนในวันพรุ่งนี้ก่อน โดยเฉพาะอย่างยิ่งในขั้นตอนแรก ๆ เช่น การลง packages ต่าง ๆ เช่น curl, nodejs, express การทดสอบ nodejs web server การเรียกไฟล์ index.html ผ่านบราวเซอร์เพื่อดูผลลัพธ์ เป็นต้น</p>
+<h2 id="รายงานแลบ"><a href="#รายงานแลบ" class="headerlink" title="รายงานแลบ"></a>รายงานแลบ</h2><p>ให้นักศึกษาอัดวิดีโอ 1 วิดีโอ ที่แสดงการทำงานที่เกิดขึ้น เมื่อนักศึกษาปฏิบัติตามคำสั่งในแต่ละข้อดังต่อไปนี้ ข้อ 4, 5, 6, 7, 8, 9, 10, Preventing XSS, Preventing CSRF, และ POWS<br>ในวิดีโอ ให้นักศึกษาระบุ<strong>อย่างชัดเจน</strong>ว่าส่วนใดในวิดีโอเป็นการแสดงการทำงานสำหรับคำสั่งในข้อใด</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/04/24/lab14/" data-id="cl2ctu9kv000cq9t904u38im4" data-title="LAB 14 -- วันที่ 25 เมษายน พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/04/24/lab14/" data-id="cl2d0fvh5000cvzt99g84aroh" data-title="LAB 14 -- วันที่ 25 เมษายน พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -171,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/04/17/lab13/" data-id="cl2ctu9ku000bq9t94r427m6n" data-title="LAB 13 -- วันที่ 18 เมษายน พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/04/17/lab13/" data-id="cl2d0fvh4000bvzt96s6w5zcz" data-title="LAB 13 -- วันที่ 18 เมษายน พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -223,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/04/03/lab12/" data-id="cl2ctu9ks0008q9t9af7oavoz" data-title="LAB 12 -- วันที่ 4 เมษายน พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/04/03/lab12/" data-id="cl2d0fvh30008vzt94qirfs7q" data-title="LAB 12 -- วันที่ 4 เมษายน พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -297,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/03/19/lab10/" data-id="cl2ctu9kq0006q9t93jqfg7j8" data-title="LAB 10 -- วันที่ 21 มีนาคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/03/19/lab10/" data-id="cl2d0fvh00006vzt9gn3p9dr9" data-title="LAB 10 -- วันที่ 21 มีนาคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -358,7 +358,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/03/13/lab9/" data-id="cl2ctu9l8000xq9t97zrsej8o" data-title="LAB 9 -- วันที่ 14 มีนาคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/03/13/lab9/" data-id="cl2d0fvhj000xvzt93wq844yy" data-title="LAB 9 -- วันที่ 14 มีนาคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -416,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/03/06/lab8/" data-id="cl2ctu9l7000vq9t92hyybx90" data-title="LAB 8 -- วันที่ 7 มีนาคม พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/03/06/lab8/" data-id="cl2d0fvhi000vvzt967rw78lk" data-title="LAB 8 -- วันที่ 7 มีนาคม พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -482,7 +482,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/02/20/lab7/" data-id="cl2ctu9l6000tq9t9axwjhv20" data-title="LAB 7 -- วันที่ 21 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/02/20/lab7/" data-id="cl2d0fvhg000tvzt9g00900u5" data-title="LAB 7 -- วันที่ 21 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -555,7 +555,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/02/13/lab6/" data-id="cl2ctu9l5000rq9t97mwy4zmy" data-title="LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/02/13/lab6/" data-id="cl2d0fvhf000rvzt972cz8xwo" data-title="LAB 6 -- วันที่ 14 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -609,7 +609,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/02/06/lab5/" data-id="cl2ctu9l4000pq9t9fnx03wrb" data-title="LAB 5 -- วันที่ 7 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/02/06/lab5/" data-id="cl2d0fvhe000pvzt93ovi28sb" data-title="LAB 5 -- วันที่ 7 กุมภาพันธ์ พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
@@ -752,7 +752,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/01/31/lab4-scripts/" data-id="cl2ctu9l1000kq9t921mpgd6o" data-title="Handout3 -- Lab 4 scripts" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/01/31/lab4-scripts/" data-id="cl2d0fvhb000kvzt96ucjgmez" data-title="Handout3 -- Lab 4 scripts" class="article-share-link">Share</a>
       
       
       

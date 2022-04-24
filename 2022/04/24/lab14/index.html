@@ -6,15 +6,15 @@
   
   <title>LAB 14 -- วันที่ 25 เมษายน พ.ศ. 2565 | CN351 Web Application Security Course Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="JSON Web Tokens (JWT)เนื่องจากแลบนี้ มีเนื้อหาหลักที่นักศึกษาส่วนใหญ่อาจยังไม่เคยเรียนรู้มาก่อน เราจะทำแลบไปพร้อม ๆ กันในชั้นเรียน ให้นักศึกษาเตรียมการก่อนเรียน อย่างน้อยใน 2 ส่วนต่อไปนี้  อ่าน README">
+  <meta name="description" content="JSON Web Tokens (JWT)เนื่องจากแลบนี้ มีเนื้อหาบางส่วนที่นักศึกษาอาจยังไม่เคยเรียนรู้มาก่อน ให้นักศึกษาเตรียมการก่อนเรียน อย่างน้อยใน 2 ส่วนต่อไปนี้  อ่าน README.md ที่ https:&#x2F;&#x2F;github.com&#x2F;mdailey&#x2F;minim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LAB 14 -- วันที่ 25 เมษายน พ.ศ. 2565">
 <meta property="og:url" content="https://nchanath.github.io/cn351/2022/04/24/lab14/index.html">
 <meta property="og:site_name" content="CN351 Web Application Security Course Website">
-<meta property="og:description" content="JSON Web Tokens (JWT)เนื่องจากแลบนี้ มีเนื้อหาหลักที่นักศึกษาส่วนใหญ่อาจยังไม่เคยเรียนรู้มาก่อน เราจะทำแลบไปพร้อม ๆ กันในชั้นเรียน ให้นักศึกษาเตรียมการก่อนเรียน อย่างน้อยใน 2 ส่วนต่อไปนี้  อ่าน README">
+<meta property="og:description" content="JSON Web Tokens (JWT)เนื่องจากแลบนี้ มีเนื้อหาบางส่วนที่นักศึกษาอาจยังไม่เคยเรียนรู้มาก่อน ให้นักศึกษาเตรียมการก่อนเรียน อย่างน้อยใน 2 ส่วนต่อไปนี้  อ่าน README.md ที่ https:&#x2F;&#x2F;github.com&#x2F;mdailey&#x2F;minim">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-24T05:03:25.000Z">
-<meta property="article:modified_time" content="2022-04-24T05:04:58.570Z">
+<meta property="article:modified_time" content="2022-04-24T08:09:58.160Z">
 <meta property="article:author" content="Chanathip Namprempre">
 <meta property="article:tag" content="Labs">
 <meta name="twitter:card" content="summary">
@@ -105,18 +105,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="JSON-Web-Tokens-JWT"><a href="#JSON-Web-Tokens-JWT" class="headerlink" title="JSON Web Tokens (JWT)"></a>JSON Web Tokens (JWT)</h1><p>เนื่องจากแลบนี้ มีเนื้อหาหลักที่นักศึกษาส่วนใหญ่อาจยังไม่เคยเรียนรู้มาก่อน เราจะทำแลบไปพร้อม ๆ กันในชั้นเรียน ให้นักศึกษาเตรียมการก่อนเรียน อย่างน้อยใน 2 ส่วนต่อไปนี้</p>
+        <h1 id="JSON-Web-Tokens-JWT"><a href="#JSON-Web-Tokens-JWT" class="headerlink" title="JSON Web Tokens (JWT)"></a>JSON Web Tokens (JWT)</h1><p>เนื่องจากแลบนี้ มีเนื้อหาบางส่วนที่นักศึกษาอาจยังไม่เคยเรียนรู้มาก่อน ให้นักศึกษาเตรียมการก่อนเรียน อย่างน้อยใน 2 ส่วนต่อไปนี้</p>
 <ul>
-<li>อ่าน README.md ที่ <a target="_blank" rel="noopener" href="https://github.com/mdailey/minimal-jwt">https://github.com/mdailey/minimal-jwt</a> โดยละเอียด เพื่อทำความเข้าใจหลักการคร่าว ๆ ของการเขียน single-page application (SPA) ด้วย nodejs โดยใช้ framework ที่ชื่อ express</li>
+<li>อ่าน README.md ที่ <a target="_blank" rel="noopener" href="https://github.com/mdailey/minimal-jwt">https://github.com/mdailey/minimal-jwt</a> โดยละเอียด เพื่อทำความเข้าใจหลักการคร่าว ๆ ของการเขียน single-page application (SPA) ด้วย nodejs โดยใช้ express framework</li>
 <li>เตรียมเครื่องคอมพิวเตอร์ของตนให้สามารถรองรับการเขียนและการทดสอบ web applications ที่เขียนด้วย nodejs บน server และ javascript บน client ได้ ในส่วนนี้ผู้เขียน tutorial (Professor Matthew Dailey) ใช้ ubuntu แบบ native และอาจารย์เองจะใช้ ubuntu ที่รันบน windows ผ่าน Windows Subsystem for Linux (WSL2) นักศึกษาสามารถทำแลบบน windows ได้ถ้าถนัดกว่า แต่หากเกิดปัญหา อาจารย์อาจไม่สามารถช่วยแก้ปัญหาได้ในเวลาเรียน อย่างไรก็ดี ไม่ว่านักศึกษาจะใช้วิธีการใด ให้นักศึกษาลงโปรแกรม editor ที่ตนเองถนัด (เช่น vscode, emacs, vi, atom, sublime ฯลฯ) และเตรียมสภาพแวดล้อมในการเขียนและการทดสอบโปรแกรมไว้ให้เรียบร้อย (เช่น terminal, firefox quantum ฯลฯ)</li>
 </ul>
-<p>ถ้าเป็นไปได้ นักศึกษาควรลองทำตาม README.md ก่อนเข้าชั้นเรียนในวันพรุ่งนี้ก่อน โดยเฉพาะอย่างยิ่งในขั้นตอนแรก ๆ เช่น การลง packages ต่าง ๆ เช่น curl, nodejs, express การทดสอบ nodejs web server การเรียกไฟล์ index.html ผ่านบราวเซอร์เพื่อดูผลลัพธ์ เป็นต้น หากทุกคนเซ็ตระบบให้เรียบร้อยก่อนเข้าเรียน เราจะสามารถใช้เวลาในการศึกษาทำความเข้าใจเนื้อหาเรื่องการทำ authentication และ authorization ผ่านการใช้ JWT (JSON Web Token) ได้อย่างเต็มที่ เพื่อให้เข้าใจว่าเหตุใด JWT จึงไม่ใช่วิธีการที่ดีในการทำ web authentication</p>
-<h2 id="รายงานแลบ"><a href="#รายงานแลบ" class="headerlink" title="รายงานแลบ"></a>รายงานแลบ</h2><p>ให้นักศึกษาอัดวิดีโอ 1 วิดีโอ ที่แสดงการทำงานที่เกิดขึ้น เมื่อนักศึกษาปฏิบัติตามคำสั่งในแต่ละข้อดังต่อไปนี้ ข้อ 4, 5, 6, 7, 8, 9, 10, Preventing XSS, Preventing CSRF, และ POWS<br>ในวิดีโอ ให้นักศึกษาระบุ__อย่างชัดเจน__ว่าส่วนใดในวิดีโอเป็นการแสดงการทำงานสำหรับคำสั่งในข้อใด</p>
+<p>ถ้าเป็นไปได้ นักศึกษาควรลองทำตาม README.md ก่อนเข้าชั้นเรียนในวันพรุ่งนี้ก่อน โดยเฉพาะอย่างยิ่งในขั้นตอนแรก ๆ เช่น การลง packages ต่าง ๆ เช่น curl, nodejs, express การทดสอบ nodejs web server การเรียกไฟล์ index.html ผ่านบราวเซอร์เพื่อดูผลลัพธ์ เป็นต้น</p>
+<h2 id="รายงานแลบ"><a href="#รายงานแลบ" class="headerlink" title="รายงานแลบ"></a>รายงานแลบ</h2><p>ให้นักศึกษาอัดวิดีโอ 1 วิดีโอ ที่แสดงการทำงานที่เกิดขึ้น เมื่อนักศึกษาปฏิบัติตามคำสั่งในแต่ละข้อดังต่อไปนี้ ข้อ 4, 5, 6, 7, 8, 9, 10, Preventing XSS, Preventing CSRF, และ POWS<br>ในวิดีโอ ให้นักศึกษาระบุ<strong>อย่างชัดเจน</strong>ว่าส่วนใดในวิดีโอเป็นการแสดงการทำงานสำหรับคำสั่งในข้อใด</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nchanath.github.io/cn351/2022/04/24/lab14/" data-id="cl2ctu9kv000cq9t904u38im4" data-title="LAB 14 -- วันที่ 25 เมษายน พ.ศ. 2565" class="article-share-link">Share</a>
+      <a data-url="https://nchanath.github.io/cn351/2022/04/24/lab14/" data-id="cl2d0fvh5000cvzt99g84aroh" data-title="LAB 14 -- วันที่ 25 เมษายน พ.ศ. 2565" class="article-share-link">Share</a>
       
       
       
